@@ -1,0 +1,22 @@
+{
+  "name": "Projet3_ohmyfood",
+  "version": "1.0.0",
+  "description": "Projet 3 - site mobile ohmyfood - Openclassrooms Site de commande de repas en ligne! Composer votre propre menu et réduiser le temps d’attente dans les restaurants.",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch /scss/main.scss:/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArnaudG28/ArnaudGhali_3_25062021.git"
+  },
+  "author": "Arnaud GHALI",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ArnaudG28/ArnaudGhali_3_25062021/issues"
+  },
+  "homepage": "https://github.com/ArnaudG28/ArnaudGhali_3_25062021#readme",
+  "dependencies": {
+    "sass": "^1.35.1"
+  }
+}
