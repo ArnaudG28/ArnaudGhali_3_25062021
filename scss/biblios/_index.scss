@@ -3,7 +3,9 @@ index.css pour index.html
 ---------
 Feuille de style pour le projet 3 ohmyfood
 Par Arnaud Ghali
-Version V1.0 initiale maquettage*/ 
+Version V2.0 initiale maquettage - mise en place du boutton d'exploration*/ 
+
+@import "typography";
 
 /* Localisation */
 .flex-localisation {
@@ -12,26 +14,58 @@ Version V1.0 initiale maquettage*/
   flex-wrap:wrap;
   align-content: center;
   margin: auto;
-  background-color:#F2F2F2;
+  width: 100%;
 }
 
 .localisation {
-  background: #eaeaea;
+  background: #c2bfbfbb;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .exploration {
-  background: #eaeaea;
+  background: #F2F2F2;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
+/* Bouton */
 
+.explorerationButton {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background-color: transparent;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: #F2F2F2;
+  height: 100%;
+  width: 100%;
+}
 
+.explorationRecherche {
+  background: linear-gradient(to bottom, $color-secondaire 10%, $color-secondaire 25%, $color-secondaire 50%, $color-primaire 75%,$color-primaire 85%); 
+  height: 50px;
+  width: 50%;
+  box-shadow: 4px 4px 6px #000;
+  border: none;
+  border-radius: 25px 25px 25px 25px;
+  padding: 0 24px;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  color:white;
+  margin: 5px;
+  -webkit-border-radius: 25px 25px 25px 25px;
+  -moz-border-radius: 25px 25px 25px 25px;
+  -ms-border-radius: 25px 25px 25px 25px;
+  -o-border-radius: 25px 25px 25px 25px;
+}
 
 
 /* Partie resultat*/
@@ -128,30 +162,12 @@ object-fit: cover;/* rempli le contenu dans la dimension*/
 /* Pour les ecrans type portable*/
 @media only screen and (max-width:768px) {
 
-/* Recherche */
 
-.rechercheTitre {
-  padding-top :16px;
-}
-.rechercheSoustitre{
-  margin-top: 8px;
-}
-
-.flex-recherche h2 {
-  font-family: 'Raleway', sans-serif;
-  font-size: 20px;
-  color: #333;
-  margin: 5px;
-}
-
-.rechercheFiltres { /* définition des éléments filtres flex*/
-  flex-direction: row;
-}
-
-.rechercheFiltresTitre {
-  flex-direction: row;
-  width: 100%;;
-}
+  /* Exploration */
+  .explorationRecherche {
+    height: 50px;
+    width: 75%;
+  }
 
 
   /* Resultat */
@@ -164,7 +180,6 @@ object-fit: cover;/* rempli le contenu dans la dimension*/
     padding :0;
     width :100%;
   }
-
 
 /* Restaurants */
   .flex-restaurant{ 
@@ -183,6 +198,7 @@ object-fit: cover;/* rempli le contenu dans la dimension*/
 }
 /* Pour les ecrans type tablette */
 @media (min-width: 769px) and (max-width:991px) {
+
 
   /* Resultat */
   .flex-resultat{
