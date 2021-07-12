@@ -2,7 +2,7 @@
 <html lang="fr">
     <!-- Maquette Projet 3 ohmyfood OpenClassRooms
     Par Arnaud Ghali
-     Version V 1.0 initiale maquettage - mise en place du boutton d'exploration -->
+     Version V 3.0 initiale maquettage - rajout logo nouveau et début fonctionnement-->
     <head>
 <!-- En-tête de la page -->
         <meta charset="utf-8" />
@@ -44,22 +44,23 @@
   
     <!-- Fonctionnement -->
     <div class="flex-fonctionnement">
+        <h2 class="policeH2">Fonctionnement</h2>
         <div class="fonctionnement">
-          <h2 class="policeH2">Fonctionnement</h2>
-          <ol class="">
-            <li class="">
-              <i class="fas fa-mobile-alt"></i>
-              <span class="policeH4">Choisissez un restaurant</span>
-            </li>
-            <li class="">
-              <i class="fas fa-list-ul"></i>
-              <span class="policeH4">Composez votre menu</span>
-            </li>
-            <li class="">
-              <i class="fas fa-store"></i>
-              <span class="policeH4">Dégustez au restaurant</span>
-            </li>
-          </ol>
+            <div class="fonctionnementStep">
+                <div class="">1</div>
+                <div><i class="fas fa-mobile-alt"></i></div>
+                <div class="policeH4">Choisissez un restaurant</div>
+            </div>
+            <div class="fonctionnementStep">                 
+                <div class="">2</div>
+                <div><i class="fas fa-list-ul"></i></div>
+                <div class="policeH4">Composez votre menu</div>
+            </div>
+            <div class="fonctionnementStep"> 
+                <div class="">3</div>
+                <div><i class="fas fa-store"></i></div>
+                <div class="policeH4">Dégustez au restaurant</div>
+            </div>
         </div>
     </div>
     <!-- Fin Fonctionnement -->
@@ -75,6 +76,7 @@
                         <a href="MenuPaletteduGout.html" class="vignetteD">
                         <div>
                             <div class="imageRestaurant" style="background-image:url('./images/restaurants/palettedugout.jpg');"></div>
+                            <div class="vignetteN">Nouveau</div>
                             <div class="vignetteContent">
                                 <h3 class="policeVignetteTitre">La palette du goût</h3>
                                 <div class="policeVignette"><i class="far fa-heart fa-2x" style="color:#0065FC ;"></i></div>
@@ -87,6 +89,7 @@
                         <a href="MenuNoteEnchantee.html" class="vignetteD">
                         <div>
                             <div class="imageRestaurant" style="background-image:url('./images/restaurants/noteenchantee.jpg');"></div>
+                            <div class="vignetteN">Nouveau</div>
                             <div class="vignetteContent">
                                 <h3 class="policeVignetteTitre">La note enchantée</h3>
                                 <div class="policeVignette"><i class="far fa-heart fa-2x" style="color:#0065FC ;"></i></div>
@@ -99,6 +102,7 @@
                         <a href="MenuAlaFrancaise.html" class="vignetteD">
                         <div>
                             <div class="imageRestaurant" style="background-image:url('./images/restaurants/francaise.jpg');"></div>
+                            <div class="vignetteN">Nouveau</div>
                             <div class="vignetteContent">
                                 <h3 class="policeVignetteTitre">À la française</h3>
                                 <div class="policeVignette"><i class="far fa-heart fa-2x" style="color:#0065FC ;"></i></div>
@@ -111,6 +115,7 @@
                         <a href="MenuDelicedesSens.html" class="vignetteD">
                         <div>
                             <div class="imageRestaurant" style="background-image:url('./images/restaurants/delicesdessens.jpg');"></div>
+                            <div class="vignetteN">Nouveau</div>
                             <div class="vignetteContent">
                                 <h3 class="policeVignetteTitre">Le délice des sens</h3>
                                 <div class="policeVignette"><i class="far fa-heart fa-2x" style="color:#0065FC ;"></i></div>
