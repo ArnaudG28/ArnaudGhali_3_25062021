@@ -3,7 +3,7 @@ index.css pour index.html
 ---------
 Feuille de style pour le projet 3 ohmyfood
 Par Arnaud Ghali
-Version V 4.0 initiale maquettage - partie fonctionnement disposition (en cours) et couleur*/ 
+Version V 5.0 initiale maquettage - partie exploration et fonctionnement - fin page index */ 
 
 @import "typography";
 
@@ -22,9 +22,12 @@ Version V 4.0 initiale maquettage - partie fonctionnement disposition (en cours)
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
   width: 100%;
 }
 
+/* Exploration */
 .exploration {
   background: #F2F2F2;
   display: flex;
@@ -34,15 +37,27 @@ Version V 4.0 initiale maquettage - partie fonctionnement disposition (en cours)
   width: 100%;
 }
 
+.explorationTitre {
+   display:flex;
+   text-align: center;
+   padding-top: 40px;
+}
+
+.explorationSoustitre{
+    display:flex;
+    text-align: center;
+    color:gray;
+    font-weight: 400;
+}
+
 /* Bouton */
 
-.explorerationButton {
+.explorationButton {
   display:flex;
   align-items:center;
   justify-content:center;
   background-color: transparent;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  padding-bottom: 40px;
   background-color: #F2F2F2;
   height: 100%;
   width: 100%;
@@ -96,8 +111,22 @@ Version V 4.0 initiale maquettage - partie fonctionnement disposition (en cours)
   width: 33%;
 }
 
+.fonctionnementNombre {
+  background-color: #9a62df;
+  color: white;
+  border-radius: 50%;
+  padding: 5px 10px;
+  margin-left: -45px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
 .fonctionnementIcon {
-  color:#c370ca;
+  color:#9a62df;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 /* Partie resultat*/
@@ -213,6 +242,10 @@ object-fit: cover;/* rempli le contenu dans la dimension*/
 
 
   /* Exploration */
+  .explorationTitre {
+    width: 70%;
+ }
+
   .explorationRecherche {
     height: 50px;
     width: 75%;
@@ -238,6 +271,7 @@ object-fit: cover;/* rempli le contenu dans la dimension*/
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     padding: 24px;
     background-color: #f2e9f3;
+    width: 80%;
   }
 
 
