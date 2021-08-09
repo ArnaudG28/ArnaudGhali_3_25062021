@@ -40,14 +40,12 @@ Version V 5.0 initiale maquettage - partie exploration et fonctionnement - fin p
 .explorationTitre {
    display:flex;
    text-align: center;
-   width: 70%;
    padding-top: 40px;
 }
 
 .explorationSoustitre{
     display:flex;
     text-align: center;
-    width: 100%;
     color:gray;
     font-weight: 400;
 }
@@ -244,6 +242,10 @@ object-fit: cover;/* rempli le contenu dans la dimension*/
 
 
   /* Exploration */
+  .explorationTitre {
+    width: 70%;
+ }
+
   .explorationRecherche {
     height: 50px;
     width: 75%;
