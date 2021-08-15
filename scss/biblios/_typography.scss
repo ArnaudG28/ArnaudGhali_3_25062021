@@ -1,7 +1,7 @@
 /* typographie commun 
 Polices :
 Logo et titres: Shrikhand
-Texte: Roboto
+Texte: Roboto 
 */
 
 /* Couleurs chartre graphique */
@@ -40,12 +40,26 @@ a { /* Pour les balises liens de toute la page*/
   width: 100%;
   text-align: center;
 }
+/* H1 pour le titre des restaurants dans les menus */
+.policeH1Menu{
+  font-family: 'Shrikhand', sans-serif;
+  font-size: 25px;
+  color: #333;
+  width: 100%;
+}
 
 /* H2 pour les titres des containers */
 .policeH2{
   font-family: 'Roboto', sans-serif;
   font-size: 20px;
   color: #333;
+  margin: 5px;
+}
+
+.policeH2Menu {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  color:gray;
   margin: 5px;
 }
 

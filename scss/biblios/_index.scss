@@ -3,7 +3,7 @@ index.css pour index.html
 ---------
 Feuille de style pour le projet 3 ohmyfood
 Par Arnaud Ghali
-Version V 5.1 initiale fin maquettage */ 
+Version V 6.0 maquettage menu - à la francçaise */ 
 
 @import "typography";
 
@@ -112,7 +112,7 @@ Version V 5.1 initiale fin maquettage */
 }
 
 .fonctionnementNombre {
-  background-color: #9a62df;
+  background-color: #9356DC;
   color: white;
   border-radius: 50%;
   padding: 5px 10px;
@@ -124,7 +124,7 @@ Version V 5.1 initiale fin maquettage */
 }
 
 .fonctionnementIcon {
-  color:#9a62df;
+  color:#9356DC;
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -162,7 +162,7 @@ Version V 5.1 initiale fin maquettage */
   text-align: left;
 }
 
-.vignette { /* Grid vignette hebergement*/
+.vignette { /* Grid vignette Restaurant*/
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
@@ -174,7 +174,7 @@ Version V 5.1 initiale fin maquettage */
   margin-right: 2%;
 }
 
-.vignetteD {/* chaque vignette hebergement*/
+.vignetteD {/* chaque vignette Restaurant*/
   background: white;
   text-decoration: none;
   color: #444;
