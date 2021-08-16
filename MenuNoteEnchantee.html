@@ -2,18 +2,18 @@
 <html lang="fr">
     <!-- Maquette Projet 3 ohmyfood OpenClassRooms
     Par Arnaud Ghali
-     Version 1.0 - maquettage -->
+    Version V 6.2 maquettage des menus - animations à réaliser -->
     <head>
 <!-- En-tête de la page -->
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Hebergement de vacances</title>
-        <meta name="title" content="ohmyfood - Paris Restaurant La Note enchantée - Site de commande de repas en ligne!">
-        <meta name="description" content="ohmyfood, composer votre propre menu avec le restaurant à la Française.">
+        <title>ohmyfood - Restaurant à la Française</title>
+        <meta name="title" content="ohmyfood - Paris Restaurant La note enchantée - Site de commande de repas en ligne!">
+        <meta name="description" content="ohmyfood, composer votre propre menu avec le restaurant La note enchantée.">
          <!-- feuille de style -->
-         <link rel="stylesheet" href="/css/style.css">
-        <!-- bibliotheque icones -->
-        <script src="https://kit.fontawesome.com/fd4f7fa464.js" crossorigin="anonymous"></script>
+         <link rel="stylesheet" type="text/css" href="css/style.css">
+         <!-- bibliotheque icones -->
+         <script src="https://kit.fontawesome.com/fd4f7fa464.js" crossorigin="anonymous"></script>
     </head>
 <!-- Body -->
 <body>
@@ -22,9 +22,237 @@
         <div class="titreOhmyfood">
             <h1 class="policeH1"><a href="index.html">Ohmyfood</a></h1>
         </div>
+        
     </header>
     <!-- Fin Header -->
- 
+    <div class="imageRestaurant" style="background-image:url('./images/restaurants/noteenchantee.jpg');"></div> 
+        <!-- Menu -->
+        <div class="flex-menus">
+            <div class="titreRestaurant">
+                <div class="titreRestaurantTexte"><span class="policeH1Menu">La note enchantée</span></div>
+                <div class="titreRestaurantCoeur"><i class="far fa-heart fa-2x"></i></div>
+            </div>
+
+            <!-- Titre Categorie Entrées -->
+                <div class="titreCategorie">
+                    <div class="categorie">
+                        <h2 class="policeH2Menu">ENTR&Eacute;ES</h2>
+                    </div>
+                    <div class="categorieLigne"></div>
+                </div>
+            <!-- Entrées -->
+                <div class="sousMenu">
+                    <div class=""><!-- grid item, containing a card -->
+                        <a href="" class="sousMenuDetail">
+                            <div>
+                                <div class="sousMenuPlat">
+                                <h3 class="policeVignetteTitre">Ravioles de foie gras</h3>
+                                </div>
+                                <div class="sousMenuAccompagnements">
+                                    <p class="policeAccompagnements">Accompagnés de leur crème à la truffe</p>
+                                    <p class="prixAccompagnements">25€</p>
+                                    <!-- à faire apparaitre avec un conditionnment sur clic
+                                        <div class="">
+                                        <span><i class="fas fa-check-circle fa-2x"></i></span>
+                                    </div>
+                                    -->
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class=""><!-- grid item, containing a card -->
+                        <a href="" class="sousMenuDetail">
+                            <div>
+                                <div class="sousMenuPlat">
+                                <h3 class="policeVignetteTitre">Caviar osciètre</h3>
+                                </div>
+                                <div class="sousMenuAccompagnements">
+                                    <p class="policeAccompagnements">Sur blini à la farine de blé noir</p>
+                                    <p class="prixAccompagnements">35€</p>
+                                    <!-- à faire apparaitre avec un conditionnment sur clic
+                                        <div class="">
+                                        <span><i class="fas fa-check-circle fa-2x"></i></span>
+                                    </div>
+                                    -->
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class=""><!-- grid item, containing a card -->
+                        <a href="" class="sousMenuDetail">
+                            <div>
+                                <div class="sousMenuPlat">
+                                <h3 class="policeVignetteTitre">Homard et espuma de potiron</h3>
+                                </div>
+                                <div class="sousMenuAccompagnements">
+                                    <p class="policeAccompagnements">Mariné aux zestes d'orange</p>
+                                    <p class="prixAccompagnements">20€</p>
+                                    <!-- à faire apparaitre avec un conditionnment sur clic
+                                        <div class="">
+                                        <span><i class="fas fa-check-circle fa-2x"></i></span>
+                                    </div>
+                                    -->
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class=""><!-- grid item, containing a card -->
+                        <a href="" class="sousMenuDetail">
+                            <div>
+                                <div class="sousMenuPlat">
+                                <h3 class="policeVignetteTitre">Foie gras de canard cuit entier</h3>
+                                </div>
+                                <div class="sousMenuAccompagnements">
+                                    <p class="policeAccompagnements">Confiture de figue et pain toasté</p>
+                                    <p class="prixAccompagnements">35€</p>
+                                    <!-- à faire apparaitre avec un conditionnment sur clic
+                                        <div class="">
+                                        <span><i class="fas fa-check-circle fa-2x"></i></span>
+                                    </div>
+                                    -->
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            <!-- Fin Entrées -->    
+            <!-- Titre Categorie Plats-->
+            <div class="titreCategorie">
+                <div class="categorie">
+                    <h2 class="policeH2Menu">PLATS</h2>
+                </div>
+                <div class="categorieLigne"></div>
+            </div>
+            <!-- Plats -->
+            <div class="sousMenu">
+                <div class=""><!-- grid item, containing a card -->
+                    <a href="" class="sousMenuDetail">
+                        <div>
+                            <div class="sousMenuPlat">
+                            <h3 class="policeVignetteTitre">Noix de coquilles Saint-Jacques</h3>
+                            </div>
+                            <div class="sousMenuAccompagnements">
+                                <p class="policeAccompagnements">Sur lit de purée de céleri-rave</p>
+                                <p class="prixAccompagnements">40€</p>
+                                <!-- à faire apparaitre avec un conditionnment sur clic
+                                    <div class="">
+                                    <span><i class="fas fa-check-circle fa-2x"></i></span>
+                                </div>
+                                -->
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class=""><!-- grid item, containing a card -->
+                    <a href="" class="sousMenuDetail">
+                        <div>
+                            <div class="sousMenuPlat">
+                            <h3 class="policeVignetteTitre">Langoustine poêlée</h3>
+                            </div>
+                            <div class="sousMenuAccompagnements">
+                                <p class="policeAccompagnements">Purée de patate douce</p>
+                                <p class="prixAccompagnements">35€</p>
+                                <!-- à faire apparaitre avec un conditionnment sur clic
+                                    <div class="">
+                                    <span><i class="fas fa-check-circle fa-2x"></i></span>
+                                </div>
+                                -->
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class=""><!-- grid item, containing a card -->
+                    <a href="" class="sousMenuDetail">
+                        <div>
+                            <div class="sousMenuPlat">
+                            <h3 class="policeVignetteTitre">Mijoté de queue de boeuf</h3>
+                            </div>
+                            <div class="sousMenuAccompagnements">
+                                <p class="policeAccompagnements">Et riz sauvage aux zestes de citron</p>
+                                <p class="prixAccompagnements">44€</p>
+                                <!-- à faire apparaitre avec un conditionnment sur clic
+                                    <div class="">
+                                    <span><i class="fas fa-check-circle fa-2x"></i></span>
+                                </div>
+                                -->
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!-- Fin Plats -->      
+            <!-- Titre Categorie Desserts -->
+            <div class="titreCategorie">
+                <div class="categorie">
+                    <h2 class="policeH2Menu">DESSERTS</h2>
+                </div>
+                <div class="categorieLigne"></div>
+            </div>
+            <!-- Desserts  -->
+            <div class="sousMenu">
+                <div class=""><!-- grid item, containing a card -->
+                    <a href="" class="sousMenuDetail">
+                        <div>
+                            <div class="sousMenuPlat">
+                            <h3 class="policeVignetteTitre">Macaron noisette et chocolat</h3>
+                            </div>
+                            <div class="sousMenuAccompagnements">
+                                <p class="policeAccompagnements">Glace au caramel brun et sel de Guérande</p>
+                                <p class="prixAccompagnements">18€</p>
+                                <!-- à faire apparaitre avec un conditionnment sur clic
+                                    <div class="">
+                                    <span><i class="fas fa-check-circle fa-2x"></i></span>
+                                </div>
+                                -->
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class=""><!-- grid item, containing a card -->
+                    <a href="" class="sousMenuDetail">
+                        <div>
+                            <div class="sousMenuPlat">
+                            <h3 class="policeVignetteTitre">Baba au rhum revisité</h3>
+                            </div>
+                            <div class="sousMenuAccompagnements">
+                                <p class="policeAccompagnements">Avec son coulis de citron</p>
+                                <p class="prixAccompagnements">22€</p>
+                                <!-- à faire apparaitre avec un conditionnment sur clic
+                                    <div class="">
+                                    <span><i class="fas fa-check-circle fa-2x"></i></span>
+                                </div>
+                                -->
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class=""><!-- grid item, containing a card -->
+                    <a href="" class="sousMenuDetail">
+                        <div>
+                            <div class="sousMenuPlat">
+                            <h3 class="policeVignetteTitre">Tarte au citron meringuée</h3>
+                            </div>
+                            <div class="sousMenuAccompagnements">
+                                <p class="policeAccompagnements">Déstructurée</p>
+                                <p class="prixAccompagnements">23€</p>
+                                <!-- à faire apparaitre avec un conditionnment sur clic
+                                    <div class="">
+                                    <span><i class="fas fa-check-circle fa-2x"></i></span>
+                                </div>
+                                -->
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!-- Fin Desserts -->
+
+            <!-- Commander -->      
+            <div class="commander">
+                <button class="boutonCommander">Commander</button>
+            </div>
+
+        </div>
     <!-- Footer --> 
     <footer>  
         <div class="footer">
@@ -47,5 +275,4 @@
     </footer>   
     <!-- Fin Footer --> 
 </body>
-
 </html>

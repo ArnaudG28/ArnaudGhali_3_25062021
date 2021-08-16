@@ -5,11 +5,12 @@ index.css pour index.html
 ---------
 Feuille de style pour le projet 3 ohmyfood
 Par Arnaud Ghali
-Version V 6.0 maquettage menu - à la francçaise */
+Version V 6.2 maquettage des menus - animations à réaliser */
 /* typographie commun 
 Polices :
 Logo et titres: Shrikhand
-Texte: Roboto 
+Texte: Roboto
+Version V 6.2 maquettage des menus - animations à réaliser
 */
 /* Couleurs chartre graphique */
 /*Body généralités polices et fond*/
@@ -435,11 +436,12 @@ Pour les menus
 menu.css pour les différents menus
 Feuille de style pour le projet 3 ohmyfood
 Par Arnaud Ghali
-Version V 6.0 maquettage menu - à la française - entrées*/
+Version V 6.2 maquettage des menus - animations à réaliser - pb image*/
 /* typographie commun 
 Polices :
 Logo et titres: Shrikhand
-Texte: Roboto 
+Texte: Roboto
+Version V 6.2 maquettage des menus - animations à réaliser
 */
 /* Couleurs chartre graphique */
 /*Body généralités polices et fond*/
@@ -542,9 +544,16 @@ a {
 }
 
 /* Menus */
+.imageRestaurant {
+  height: 300px;
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+}
+
 .titreRestaurant {
   display: grid;
-  grid-template-columns: 70% 30%;
+  grid-template-columns: 80% 20%;
   grid-template-rows: auto;
   width: 100%;
 }
@@ -573,25 +582,35 @@ a {
 }
 
 /* Mise en forme des titres : Entrées, Plats, Desserts */
-.titreSousMenu {
+.titreCategorie {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  width: 100%;
+  justify-content: start;
+  text-align: left;
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+
+.categorie {
   display: flex;
   flex-direction: row;
   text-align: left;
 }
 
-/* Mise en forme des accompagnements des menus */
-.accompagnements {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
+.categorieLigne {
+  width: 50px;
+  border: 2px solid #99E2D0;
+  margin-left: 5px;
 }
 
-.menuEntrees {
-  /* Grid vignette menu Entrées*/
+.sousMenu {
+  /* Grid vignette sous-menu*/
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
-  grid-gap: 20px;
+  grid-gap: 10px;
   background-color: #F2F2F2;
   width: 90%;
   align-content: space-between;
@@ -599,8 +618,8 @@ a {
   margin-right: 2%;
 }
 
-.entreeDetail {
-  /* chaque Entrée*/
+.sousMenuDetail {
+  /* chaque Plat*/
   background: white;
   text-decoration: none;
   color: #444;
@@ -620,12 +639,20 @@ a {
   padding: 0;
 }
 
-.entree {
+/* Plat */
+.sousMenuPlat {
   padding-top: 5px;
 }
 
-/* Police pour les menus accompagnements*/
+/* Accompagnements*/
+.sousMenuAccompagnements {
+  display: grid;
+  grid-template-columns: 80% 20%;
+  grid-template-rows: auto;
+}
+
 .policeAccompagnements {
+  font-size: 14px;
   text-align: left;
   margin-top: 2%;
   color: gray;
@@ -638,6 +665,38 @@ a {
   margin-top: 2%;
   font-weight: 500;
   padding-right: 5px;
+}
+
+/* Bouton commander*/
+.commander {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  padding-top: 40px;
+  padding-bottom: 80px;
+  background-color: #F2F2F2;
+  height: 100%;
+  width: 100%;
+}
+
+.boutonCommander {
+  background: linear-gradient(to bottom, #FF79DA 10%, #FF79DA 25%, #FF79DA 50%, #9356DC 75%, #9356DC 85%);
+  height: 50px;
+  width: 70%;
+  box-shadow: 4px 4px 6px #000;
+  border: none;
+  border-radius: 25px 25px 25px 25px;
+  padding: 0 24px;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  color: white;
+  margin: 5px;
+  -webkit-border-radius: 25px 25px 25px 25px;
+  -moz-border-radius: 25px 25px 25px 25px;
+  -ms-border-radius: 25px 25px 25px 25px;
+  -o-border-radius: 25px 25px 25px 25px;
 }
 
 /*Definition pour les responsives */
@@ -654,7 +713,7 @@ a {
     width: 100%;
   }
 
-  .menuEntrees {
+  .sousMenu {
     grid-template-columns: 1fr;
     align-content: space-between;
     margin-left: 0;
@@ -664,7 +723,8 @@ a {
 /* typographie commun 
 Polices :
 Logo et titres: Shrikhand
-Texte: Roboto 
+Texte: Roboto
+Version V 6.2 maquettage des menus - animations à réaliser
 */
 /* Couleurs chartre graphique */
 /*Body généralités polices et fond*/
@@ -766,6 +826,7 @@ a {
   margin: 5px;
 }
 
+/* Version V 6.2 maquettage des menus - animations à réaliser*/
 /* Header */
 .titreOhmyfood {
   display: flex;
