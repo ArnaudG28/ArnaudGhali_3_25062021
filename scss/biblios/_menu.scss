@@ -4,7 +4,7 @@ Pour les menus
 menu.css pour les différents menus
 Feuille de style pour le projet 3 ohmyfood
 Par Arnaud Ghali
-Version V 6.2 maquettage des menus - animations à réaliser - pb image*/ 
+Version V 7.0 animations boutons */ 
 
 
 @import "typography";
@@ -12,12 +12,11 @@ Version V 6.2 maquettage des menus - animations à réaliser - pb image*/
 
 
 /* Menus */
-
 .imageRestaurant {
-height: 300px;
-width: 100%;
-background-size:cover;
-background-position: center center;
+  height: 300px;
+  width: 100%;
+  background-size:cover;
+  background-position: center center;
 }
 
 .titreRestaurant {
@@ -171,8 +170,8 @@ background-position: center center;
 /* Pour les ecrans type portable*/
 @media only screen and (max-width:768px) {
 
-
   /* Menus */
+
   .flex-menus{
     flex-direction: column;
     align-items: center;

@@ -3,7 +3,7 @@ index.css pour index.html
 ---------
 Feuille de style pour le projet 3 ohmyfood
 Par Arnaud Ghali
-Version V 6.2 maquettage des menus - animations à réaliser */ 
+Version V 7.0 animations boutons */ 
 
 @import "typography";
 
@@ -64,7 +64,7 @@ Version V 6.2 maquettage des menus - animations à réaliser */
 }
 
 .explorationRecherche {
-  background: linear-gradient(to bottom, $color-secondaire 10%, $color-secondaire 25%, $color-secondaire 50%, $color-primaire 75%,$color-primaire 85%); 
+  background: linear-gradient(to right, $color-secondaire 10%, $color-secondaire 25%, $color-secondaire 50%, $color-primaire 75%,$color-primaire 85%); 
   height: 50px;
   width: 50%;
   box-shadow: 4px 4px 6px #000;
@@ -109,10 +109,14 @@ Version V 6.2 maquettage des menus - animations à réaliser */
   font-size: large; 
   font-weight: bold;
   width: 33%;
+/* animation sur les boutons - au survol */
+  &:hover {
+    background:linear-gradient(to right, $color-secondaire 10%, $color-secondaire 25%, $color-secondaire 50%, $color-primaire 75%,$color-primaire 85%);
+  }
 }
 
 .fonctionnementNombre {
-  background-color: #9356DC;
+  background-color: $color-primaire;
   color: white;
   border-radius: 50%;
   padding: 5px 10px;
@@ -124,7 +128,7 @@ Version V 6.2 maquettage des menus - animations à réaliser */
 }
 
 .fonctionnementIcon {
-  color:#9356DC;
+  color : $color-primaire;
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -221,19 +225,34 @@ Version V 6.2 maquettage des menus - animations à réaliser */
   top: -2px;
   box-shadow: 0 4px 5px rgba(0,0,0,0.2);
 }
-.vignetteD .imageRestaurant {
+.vignetteD .imageVignetteRestaurant {
   padding-bottom: 50%;
   margin: 5px 5px 5px 5px;
   background-size:cover;
   background-position: center center;
 }
 
-.imageRestaurant {
+.imageVignetteRestaurant {
 border-top-right-radius: 5px;
 border-top-left-radius: 5px;
 object-fit: cover;/* rempli le contenu dans la dimension*/
 }
 
+/* animation sur le coeur - au survol */
+.vignetteCoeur {
+  background-color: black;
+ -webkit-background-clip: text;
+  -webkit-text-fill-color:transparent;
+  font-weight: bold;
+  transition-property: background-color;
+  transition-duration: 5s;
+  &:hover {
+    background-color: $color-secondaire;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:transparent;
+    font-weight: bold;
+    }
+}
 
 
 /*Definition pour les responsives */
