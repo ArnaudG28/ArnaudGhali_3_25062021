@@ -2,7 +2,7 @@
 <html lang="fr">
     <!-- Maquette Projet 3 ohmyfood OpenClassRooms
     Par Arnaud Ghali
-    Version V 7.0 animations boutons -->
+    Version V 7.1 animations loading spinner, apparitions des sous menus et coche -->
     <head>
 <!-- En-tête de la page -->
         <meta charset="utf-8" />
@@ -34,6 +34,8 @@
                 <div class="titreRestaurantCoeur"><i class="far fa-heart fa-2x"></i></div>
             </div>
 
+        <!-- Entrées -->
+        <div class="entrees">
             <!-- Titre Categorie Entrées -->
                 <div class="titreCategorie">
                     <div class="categorie">
@@ -41,22 +43,25 @@
                     </div>
                     <div class="categorieLigne"></div>
                 </div>
-            <!-- Entrées -->
+            <!-- Menu Entrées -->
                 <div class="sousMenu">
                     <div class=""><!-- grid item, containing a card -->
                         <a href="" class="sousMenuDetail">
                             <div>
                                 <div class="sousMenuPlat">
-                                <h3 class="policeVignetteTitre">Tartare de poulpe acidulé</h3>
+                                    <h3 class="policeVignetteTitre">Tartare de poulpe acidulé</h3>
+                                    <div class=""></div>
+                                    <div class="fusionIcone"></div>
                                 </div>
                                 <div class="sousMenuAccompagnements">
                                     <p class="policeAccompagnements">Aux zestes d'orange</p>
                                     <p class="prixAccompagnements">25€</p>
-                                    <!-- à faire apparaitre avec un conditionnment sur clic
-                                        <div class="">
-                                        <span><i class="fas fa-check-circle fa-2x"></i></span>
+                                    <!-- apparait avec un conditionnment sur survol -->
+                                    <div class="selection">
+                                        <div class="selectionIcone">
+                                            <i class="fas fa-check-circle fa-2x"></i>
+                                        </div>
                                     </div>
-                                    -->
                                 </div>
                             </div>
                         </a>
@@ -65,16 +70,19 @@
                         <a href="" class="sousMenuDetail">
                             <div>
                                 <div class="sousMenuPlat">
-                                <h3 class="policeVignetteTitre">Velouté de légumes d'antan</h3>
+                                    <h3 class="policeVignetteTitre">Velouté de légumes d'antan</h3>
+                                    <div class=""></div>
+                                    <div class="fusionIcone"></div>
                                 </div>
                                 <div class="sousMenuAccompagnements">
                                     <p class="policeAccompagnements">Carotte, panais, topinambour</p>
                                     <p class="prixAccompagnements">35€</p>
-                                    <!-- à faire apparaitre avec un conditionnment sur clic
-                                        <div class="">
-                                        <span><i class="fas fa-check-circle fa-2x"></i></span>
+                                    <!-- apparait avec un conditionnment sur survol -->
+                                    <div class="selection">
+                                        <div class="selectionIcone">
+                                            <i class="fas fa-check-circle fa-2x"></i>
+                                        </div>
                                     </div>
-                                    -->
                                 </div>
                             </div>
                         </a>
@@ -83,22 +91,30 @@
                         <a href="" class="sousMenuDetail">
                             <div>
                                 <div class="sousMenuPlat">
-                                <h3 class="policeVignetteTitre">Soupe à l'oignon</h3>
+                                    <h3 class="policeVignetteTitre">Soupe à l'oignon</h3>
+                                    <div class=""></div>
+                                    <div class="fusionIcone"></div>
                                 </div>
                                 <div class="sousMenuAccompagnements">
                                     <p class="policeAccompagnements">Revisitée</p>
                                     <p class="prixAccompagnements">20€</p>
-                                    <!-- à faire apparaitre avec un conditionnment sur clic
-                                        <div class="">
-                                        <span><i class="fas fa-check-circle fa-2x"></i></span>
+                                    <!-- apparait avec un conditionnment sur survol -->
+                                    <div class="selection">
+                                        <div class="selectionIcone">
+                                            <i class="fas fa-check-circle fa-2x"></i>
+                                        </div>
                                     </div>
-                                    -->
                                 </div>
                             </div>
                         </a>
                     </div>
                 </div>
-            <!-- Fin Entrées -->    
+            <!-- Fin Menu Entrées -->  
+        </div>
+        <!-- Fin Entrées -->            
+            
+        <!-- Plats -->
+        <div class="plats">
             <!-- Titre Categorie Plats-->
             <div class="titreCategorie">
                 <div class="categorie">
@@ -106,22 +122,25 @@
                 </div>
                 <div class="categorieLigne"></div>
             </div>
-            <!-- Plats -->
+            <!-- Menu Plats -->
             <div class="sousMenu">
                 <div class=""><!-- grid item, containing a card -->
                     <a href="" class="sousMenuDetail">
                         <div>
                             <div class="sousMenuPlat">
-                            <h3 class="policeVignetteTitre">Coquilles Saint-Jacques</h3>
+                                <h3 class="policeVignetteTitre">Coquilles Saint-Jacques</h3>
+                                <div class=""></div>
+                                <div class="fusionIcone"></div>
                             </div>
                             <div class="sousMenuAccompagnements">
                                 <p class="policeAccompagnements">Accompagnées d'une purée de panais</p>
                                 <p class="prixAccompagnements">40€</p>
-                                <!-- à faire apparaitre avec un conditionnment sur clic
-                                    <div class="">
-                                    <span><i class="fas fa-check-circle fa-2x"></i></span>
+                                <!-- apparait avec un conditionnment sur survol -->
+                                <div class="selection">
+                                    <div class="selectionIcone">
+                                        <i class="fas fa-check-circle fa-2x"></i>
+                                    </div>
                                 </div>
-                                -->
                             </div>
                         </div>
                     </a>
@@ -130,16 +149,19 @@
                     <a href="" class="sousMenuDetail">
                         <div>
                             <div class="sousMenuPlat">
-                            <h3 class="policeVignetteTitre">Magret de canard</h3>
+                                <h3 class="policeVignetteTitre">Magret de canard</h3>
+                                <div class=""></div>
+                                <div class="fusionIcone"></div>
                             </div>
                             <div class="sousMenuAccompagnements">
                                 <p class="policeAccompagnements">Et parmentier de pommes de terre</p>
                                 <p class="prixAccompagnements">35€</p>
-                                <!-- à faire apparaitre avec un conditionnment sur clic
-                                    <div class="">
-                                    <span><i class="fas fa-check-circle fa-2x"></i></span>
+                                <!-- apparait avec un conditionnment sur survol -->
+                                <div class="selection">
+                                    <div class="selectionIcone">
+                                        <i class="fas fa-check-circle fa-2x"></i>
+                                    </div>
                                 </div>
-                                -->
                             </div>
                         </div>
                     </a>
@@ -148,22 +170,30 @@
                     <a href="" class="sousMenuDetail">
                         <div>
                             <div class="sousMenuPlat">
-                            <h3 class="policeVignetteTitre">Pigeonneau d’Ille-et-Vilaine</h3>
+                                <h3 class="policeVignetteTitre">Pigeonneau d’Ille-et-Vilaine</h3>
+                                <div class=""></div>
+                                <div class="fusionIcone"></div>
                             </div>
                             <div class="sousMenuAccompagnements">
                                 <p class="policeAccompagnements">Sur son lit de gnocchis aux légumes</p>
                                 <p class="prixAccompagnements">44€</p>
-                                <!-- à faire apparaitre avec un conditionnment sur clic
-                                    <div class="">
-                                    <span><i class="fas fa-check-circle fa-2x"></i></span>
+                                <!-- apparait avec un conditionnment sur survol -->
+                                <div class="selection">
+                                    <div class="selectionIcone">
+                                        <i class="fas fa-check-circle fa-2x"></i>
+                                    </div>
                                 </div>
-                                -->
                             </div>
                         </div>
                     </a>
                 </div>
             </div>
-            <!-- Fin Plats -->      
+            <!-- Fin Menu Plats -->
+        </div>
+        <!-- Fin Plats --> 
+         
+        <!-- Desserts -->
+        <div class="desserts">
             <!-- Titre Categorie Desserts -->
             <div class="titreCategorie">
                 <div class="categorie">
@@ -171,22 +201,25 @@
                 </div>
                 <div class="categorieLigne"></div>
             </div>
-            <!-- Desserts  -->
+            <!-- Menu Desserts  -->
             <div class="sousMenu">
                 <div class=""><!-- grid item, containing a card -->
                     <a href="" class="sousMenuDetail">
                         <div>
                             <div class="sousMenuPlat">
-                            <h3 class="policeVignetteTitre">Pétales de violettes glacés</h3>
+                                <h3 class="policeVignetteTitre">Pétales de violettes glacés</h3>
+                                <div class=""></div>
+                                <div class="fusionIcone"></div>
                             </div>
                             <div class="sousMenuAccompagnements">
                                 <p class="policeAccompagnements">Et purée de noisettes</p>
                                 <p class="prixAccompagnements">18€</p>
-                                <!-- à faire apparaitre avec un conditionnment sur clic
-                                    <div class="">
-                                    <span><i class="fas fa-check-circle fa-2x"></i></span>
+                                <!-- apparait avec un conditionnment sur survol -->
+                                <div class="selection">
+                                    <div class="selectionIcone">
+                                        <i class="fas fa-check-circle fa-2x"></i>
+                                    </div>
                                 </div>
-                                -->
                             </div>
                         </div>
                     </a>
@@ -195,16 +228,19 @@
                     <a href="" class="sousMenuDetail">
                         <div>
                             <div class="sousMenuPlat">
-                            <h3 class="policeVignetteTitre">Fondant au chocolat</h3>
+                                <h3 class="policeVignetteTitre">Fondant au chocolat</h3>
+                                <div class=""></div>
+                                <div class="fusionIcone"></div>
                             </div>
                             <div class="sousMenuAccompagnements">
                                 <p class="policeAccompagnements">Revisité</p>
                                 <p class="prixAccompagnements">22€</p>
-                                <!-- à faire apparaitre avec un conditionnment sur clic
-                                    <div class="">
-                                    <span><i class="fas fa-check-circle fa-2x"></i></span>
+                                <!-- apparait avec un conditionnment sur survol -->
+                                <div class="selection">
+                                    <div class="selectionIcone">
+                                        <i class="fas fa-check-circle fa-2x"></i>
+                                    </div>
                                 </div>
-                                -->
                             </div>
                         </div>
                     </a>
@@ -213,22 +249,27 @@
                     <a href="" class="sousMenuDetail">
                         <div>
                             <div class="sousMenuPlat">
-                            <h3 class="policeVignetteTitre">Millefeuille croustillant</h3>
+                                <h3 class="policeVignetteTitre">Millefeuille croustillant</h3>
+                                <div class=""></div>
+                                <div class="fusionIcone"></div>
                             </div>
                             <div class="sousMenuAccompagnements">
                                 <p class="policeAccompagnements">Myrtilles et pâte d’amande</p>
                                 <p class="prixAccompagnements">23€</p>
-                                <!-- à faire apparaitre avec un conditionnment sur clic
-                                    <div class="">
-                                    <span><i class="fas fa-check-circle fa-2x"></i></span>
+                            <!-- apparait avec un conditionnment sur survol -->
+                                <div class="selection">
+                                    <div class="selectionIcone">
+                                        <i class="fas fa-check-circle fa-2x"></i>
+                                    </div>
                                 </div>
-                                -->
                             </div>
                         </div>
                     </a>
                 </div>
             </div>
-            <!-- Fin Desserts -->
+            <!-- Fin Menu Desserts -->
+        </div>
+        <!-- Fin Desserts --> 
 
             <!-- Commander -->      
             <div class="commander">

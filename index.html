@@ -2,7 +2,7 @@
 <html lang="fr">
     <!-- Maquette Projet 3 ohmyfood OpenClassRooms
     Par Arnaud Ghali
-    Version V 7.0 animations boutons -->
+    Version V 7.1 animations loading spinner, apparitions des sous menus et coche -->
     <head>
 <!-- En-tête de la page -->
         <meta charset="utf-8" />
@@ -15,16 +15,21 @@
         <link rel="alternate" hreflang="fr" href="https://arnaudg28.github.io/ArnaudGhali_3_25062021/"/>
         <!-- feuille de style -->
         <link rel="stylesheet" type="text/css" href="css/style.css">
+        <!-- Balise canonique doit être unique-->
+        <link rel="canonical" href="https://arnaudg28.github.io/ArnaudGhali_3_25062021/index"/>
         <!-- bibliotheque icones -->
         <script src="https://kit.fontawesome.com/fd4f7fa464.js" crossorigin="anonymous"></script>
     </head>
         <!-- Body -->
     <body>
+    <!-- loading spinner -->
+    <div class="spinChargement">
+        <div class="spin"></div>
+        <span class="spinText">Loading ...</span>
+    </div>
+    <!-- Fin loading spinner --> 
     <!-- Header -->
     <header>
-            <!-- Balise canonique doit être unique-->
-            <link rel="canonical" href="https://arnaudg28.github.io/ArnaudGhali_3_25062021/index" />
-            <!-- Fin Balise canonique -->
             <div class="titreOhmyfood">
                 <h1 class="policeH1"><a href="index.html">Ohmyfood</a></h1>
             </div>
@@ -40,7 +45,9 @@
     
         <div class="exploration">
             <div class="explorationTitre"><h2 class="policeH2"> Réservez le menu qui vous convient</h2></div>
-            <p class="policeH3"><div class="explorationSoustitre"> Découvrez des restaurants d'exception, sélectionnés par nos soins</div></p>
+            <p class="policeH3">
+                <div class="explorationSoustitre">Découvrez des restaurants d'exception, sélectionnés par nos soins</div>
+            </p>
             <div class="explorationButton">
                 <button class="explorationRecherche">Explorer nos restaurants</button>
             </div>
