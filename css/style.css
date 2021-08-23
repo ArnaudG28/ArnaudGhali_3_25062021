@@ -5,13 +5,12 @@ index.css pour index.html
 ---------
 Feuille de style pour le projet 3 ohmyfood
 Par Arnaud Ghali
-Version V 6.2 maquettage des menus - animations à réaliser */
+Version V 7.1 animations loading spinner, apparitions des sous menus et coche */
 /* typographie commun 
 Polices :
 Logo et titres: Shrikhand
 Texte: Roboto
-Version V 6.2 maquettage des menus - animations à réaliser
-*/
+Version V 7.0 animations boutons */
 /* Couleurs chartre graphique */
 /*Body généralités polices et fond*/
 html {
@@ -110,6 +109,71 @@ a {
   font-size: 18px;
   color: white;
   margin: 5px;
+}
+
+/* loading spinner */
+.spinChargement {
+  background: white;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  animation-name: spinChargement;
+  animation-duration: 3s;
+  animation: spinChargement 1s ease-in-out 3s forwards;
+  -webkit-animation: spinChargement 1s ease-in-out 3s forwards;
+}
+
+@keyframes spinChargement {
+  0% {
+    opacity: 1;
+    z-index: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: 0;
+  }
+}
+.spin {
+  vertical-align: middle;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  border-radius: 50%;
+  border-top: 16px solid #9356DC;
+  border-right: 16px solid #FF79DA;
+  border-bottom: 16px solid #9356DC;
+  border-left: 16px solid #FF79DA;
+  width: 50px;
+  height: 50px;
+  animation: spin 1.5s linear infinite;
+  -webkit-animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+  }
+}
+.spinText {
+  vertical-align: middle;
+  position: absolute;
+  top: 60%;
+  left: 48%;
+  font-family: "Shrikhand", sans-serif;
+  font-size: 32px;
+  color: #333;
+  text-align: center;
 }
 
 /* Localisation */
@@ -168,7 +232,7 @@ a {
 }
 
 .explorationRecherche {
-  background: linear-gradient(to bottom, #FF79DA 10%, #FF79DA 25%, #FF79DA 50%, #9356DC 75%, #9356DC 85%);
+  background: linear-gradient(to right, #FF79DA 10%, #FF79DA 25%, #FF79DA 50%, #9356DC 75%, #9356DC 85%);
   height: 50px;
   width: 50%;
   box-shadow: 4px 4px 6px #000;
@@ -213,6 +277,10 @@ a {
   font-size: large;
   font-weight: bold;
   width: 33%;
+  /* animation sur les boutons - au survol */
+}
+.fonctionnementStep:hover {
+  background: linear-gradient(to right, #FF79DA 10%, #FF79DA 25%, #FF79DA 50%, #9356DC 75%, #9356DC 85%);
 }
 
 .fonctionnementNombre {
@@ -254,7 +322,7 @@ a {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   flex-wrap: wrap;
-  align-items: start;
+  align-items: center;
   align-content: center;
   margin-top: 15px;
   margin-bottom: 20px;
@@ -296,7 +364,6 @@ a {
   border-top-right-radius: 5px;
   position: relative;
   top: 0;
-  transition: all 0.1s ease-in;
   padding: 0;
 }
 
@@ -330,23 +397,49 @@ a {
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
 }
 
-.vignetteD .imageRestaurant {
+.vignetteD .imageVignetteRestaurant {
   padding-bottom: 50%;
   margin: 5px 5px 5px 5px;
   background-size: cover;
   background-position: center center;
 }
 
-.imageRestaurant {
+.imageVignetteRestaurant {
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
   object-fit: cover;
   /* rempli le contenu dans la dimension*/
 }
 
+/* animation sur le coeur - au survol */
+.vignetteCoeur {
+  background-color: black;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition-property: background-color;
+  transition-duration: 3s;
+}
+.vignetteCoeur:hover {
+  background-color: #9356DC;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
 /*Definition pour les responsives */
 /* Pour les ecrans type portable*/
 @media only screen and (max-width: 768px) {
+  /* loading spinner */
+  .spin {
+    top: 20%;
+    left: 35%;
+  }
+
+  .spinText {
+    top: 30%;
+    left: 25%;
+  }
+
   /* Exploration */
   .explorationTitre {
     width: 70%;
@@ -396,6 +489,7 @@ a {
   .flex-restaurant {
     width: 100%;
     margin-left: 0;
+    padding-left: 5px;
   }
 
   .vignette {
@@ -436,13 +530,12 @@ Pour les menus
 menu.css pour les différents menus
 Feuille de style pour le projet 3 ohmyfood
 Par Arnaud Ghali
-Version V 6.2 maquettage des menus - animations à réaliser - pb image*/
+Version V 7.1 animations loading spinner, apparitions des sous menus et coche */
 /* typographie commun 
 Polices :
 Logo et titres: Shrikhand
 Texte: Roboto
-Version V 6.2 maquettage des menus - animations à réaliser
-*/
+Version V 7.0 animations boutons */
 /* Couleurs chartre graphique */
 /*Body généralités polices et fond*/
 html {
@@ -543,10 +636,102 @@ a {
   margin: 5px;
 }
 
+/* Animations */
+/* Apparition des sous-menus*/
+.entrees {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  width: 100%;
+  animation: apparition 3s ease-in-out;
+  -webkit-animation: apparition 3s ease-in-out;
+}
+
+.plats {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  width: 100%;
+  animation: apparition 6s ease-in-out;
+  -webkit-animation: apparition 6s ease-in-out;
+}
+
+.desserts {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  width: 100%;
+  animation: apparition 9s ease-in-out;
+  -webkit-animation: apparition 9s ease-in-out;
+}
+
+@keyframes apparition {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Apparition de la coche */
+.selection {
+  opacity: 0;
+  position: relative;
+}
+
+.selectionIcone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  height: 15px;
+  width: 15px;
+  background-color: #99E2D0;
+}
+
+.fusionIcone {
+  background-color: white;
+  border-top-right-radius: 5px;
+}
+
+.sousMenuDetail:hover {
+  /*Puis au survol, soulevons la carte légèrement, rendons l’ombre plus prononcée et apparition de la coche*/
+  top: -2px;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+}
+.sousMenuDetail:hover .selection {
+  opacity: 1;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #99E2D0;
+  border-bottom-right-radius: 5px;
+}
+.sousMenuDetail:hover .selectionIcone {
+  transform: rotate(360deg);
+  transition-duration: 0.5s;
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+}
+.sousMenuDetail:hover .sousMenuAccompagnements {
+  grid-template-columns: 80% 10% 10%;
+}
+.sousMenuDetail:hover .sousMenuPlat {
+  grid-template-columns: 80% 10% 10%;
+}
+.sousMenuDetail:hover .fusionIcone {
+  background-color: #99E2D0;
+  border-top-right-radius: 5px;
+}
+
 /* Menus */
 .imageRestaurant {
   height: 300px;
   width: 100%;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
   background-size: cover;
   background-position: center center;
 }
@@ -612,10 +797,8 @@ a {
   grid-template-rows: auto;
   grid-gap: 10px;
   background-color: #F2F2F2;
-  width: 90%;
+  width: 100%;
   align-content: space-between;
-  margin-left: 2%;
-  margin-right: 2%;
 }
 
 .sousMenuDetail {
@@ -629,26 +812,34 @@ a {
   flex-direction: column;
   line-height: 16px;
   min-height: 100%;
+  position: relative;
+  top: 0;
+  padding: 0;
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
-  position: relative;
-  top: 0;
-  transition: all 0.1s ease-in;
-  padding: 0;
+  margin-left: 2%;
+  margin-right: 2%;
 }
 
 /* Plat */
 .sousMenuPlat {
-  padding-top: 5px;
+  display: grid;
+  grid-template-columns: 97% 1% 2%;
+  grid-template-rows: auto;
+  padding-top: 0px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 /* Accompagnements*/
 .sousMenuAccompagnements {
   display: grid;
-  grid-template-columns: 80% 20%;
+  grid-template-columns: 80% 19% 1%;
   grid-template-rows: auto;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 
 .policeAccompagnements {
@@ -702,6 +893,17 @@ a {
 /*Definition pour les responsives */
 /* Pour les ecrans type portable*/
 @media only screen and (max-width: 768px) {
+  /* Animations coche */
+  .sousMenuDetail:hover {
+    /*Puis au survol, soulevons la carte légèrement, rendons l’ombre plus prononcée et apparition de la coche*/
+  }
+  .sousMenuDetail:hover .sousMenuAccompagnements {
+    grid-template-columns: 75% 10% 15%;
+  }
+  .sousMenuDetail:hover .sousMenuPlat {
+    grid-template-columns: 75% 10% 15%;
+  }
+
   /* Menus */
   .flex-menus {
     flex-direction: column;
@@ -724,8 +926,7 @@ a {
 Polices :
 Logo et titres: Shrikhand
 Texte: Roboto
-Version V 6.2 maquettage des menus - animations à réaliser
-*/
+Version V 7.0 animations boutons */
 /* Couleurs chartre graphique */
 /*Body généralités polices et fond*/
 html {
@@ -826,7 +1027,7 @@ a {
   margin: 5px;
 }
 
-/* Version V 6.2 maquettage des menus - animations à réaliser*/
+/* Version V 7.0 animations boutons */
 /* Header */
 .titreOhmyfood {
   display: flex;
