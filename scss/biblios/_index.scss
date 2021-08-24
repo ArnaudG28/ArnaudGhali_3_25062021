@@ -3,7 +3,7 @@ index.css pour index.html
 ---------
 Feuille de style pour le projet 3 ohmyfood
 Par Arnaud Ghali
-Version V 7.1 animations loading spinner, apparitions des sous menus et coche */ 
+Version V 7.2 optimisations animations - simplification du code */ 
 
 @import "typography";
 
@@ -307,16 +307,15 @@ object-fit: cover;/* rempli le contenu dans la dimension*/
 
 /* animation sur le coeur - au survol */
 .vignetteCoeur {
-  background-color: black;
- -webkit-background-clip: text;
-  -webkit-text-fill-color:transparent;
-  transition-property: background-color;
-  transition-duration: 3s;
-  &:hover {
-    background-color: $color-primaire;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color:transparent;
-    font-weight: bold;
+
+    &:hover {
+      animation: all;
+      transition: 0.8s;
+      opacity: 1;
+      background: $color-primaire;
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+      font-weight: bold;
     }
 }
 

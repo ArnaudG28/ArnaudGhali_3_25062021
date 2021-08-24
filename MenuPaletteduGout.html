@@ -2,7 +2,7 @@
 <html lang="fr">
     <!-- Maquette Projet 3 ohmyfood OpenClassRooms
     Par Arnaud Ghali
-    Version V 7.1 animations loading spinner, apparitions des sous menus et coche -->
+    Version V 7.2 optimisations animations - simplification du code -->
     <head>
 <!-- En-tête de la page -->
         <meta charset="utf-8" />
@@ -23,7 +23,6 @@
             <a href="index.html"><i class="fas fa-arrow-left header__arrow"></i></a>
             <h1 class="policeH1"><a href="index.html">Ohmyfood</a></h1>
         </div>
-        
     </header>
     <!-- Fin Header -->
     <div class="imageRestaurant" style="background-image:url('./images/restaurants/delicesdessens.jpg');"></div> 
@@ -45,68 +44,44 @@
                 </div>
             <!-- Entrées -->
                 <div class="sousMenu">
-                    <div class=""><!-- grid item, containing a card -->
-                        <a href="" class="sousMenuDetail">
-                            <div>
-                                <div class="sousMenuPlat">
-                                    <h3 class="policeVignetteTitre">Fricassée d'escargot</h3>
-                                    <div class=""></div>
-                                    <div class="fusionIcone"></div>
-                                </div>
-                                <div class="sousMenuAccompagnements">
-                                    <p class="policeAccompagnements">Au piment d'Espelette</p>
-                                    <p class="prixAccompagnements">25€</p>
-                                    <!-- apparait avec un conditionnment sur survol -->
-                                    <div class="selection">
-                                        <div class="selectionIcone">
-                                            <i class="fas fa-check-circle fa-2x"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
+                    <div class="sousMenuDetail"><!-- grid item, containing a card -->
+                        <div class="sousMenuPlat">
+                            <h3 class="policeVignetteTitre">Fricassée d'escargot</h3>
+                            <p class="policeAccompagnements">Au piment d'Espelette</p>
+                        </div>
+                        <div class="sousMenuPrix">
+                            <p class="prixPlat">25€</p>
+                        </div>
+                            <!-- apparait avec un conditionnment sur survol -->
+                        <div class="sousMenuIcone">
+                            <i class="fas fa-check-circle fa-2x"></i>
+                        </div>
                     </div>
-                    <div class=""><!-- grid item, containing a card -->
-                        <a href="" class="sousMenuDetail">
-                            <div>
-                                <div class="sousMenuPlat">
-                                    <h3 class="policeVignetteTitre">Foie gras de canard mi-cuit</h3>
-                                    <div class=""></div>
-                                    <div class="fusionIcone"></div>
-                                </div>
-                                <div class="sousMenuAccompagnements">
-                                    <p class="policeAccompagnements">Et ses copeaux de truffe noire</p>
-                                    <p class="prixAccompagnements">35€</p>
-                                    <!-- apparait avec un conditionnment sur survol -->
-                                    <div class="selection">
-                                        <div class="selectionIcone">
-                                            <i class="fas fa-check-circle fa-2x"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
+                    <div class="sousMenuDetail"><!-- grid item, containing a card -->
+                        <div class="sousMenuPlat">
+                            <h3 class="policeVignetteTitre">Foie gras de canard mi-cuit</h3>
+                            <p class="policeAccompagnements">Et ses copeaux de truffe noire</p>
+                        </div>
+                        <div class="sousMenuPrix">
+                            <p class="prixPlat">35€</p>
+                        </div>
+                            <!-- apparait avec un conditionnment sur survol -->
+                        <div class="sousMenuIcone">
+                            <i class="fas fa-check-circle fa-2x"></i>
+                        </div>
                     </div>
-                    <div class=""><!-- grid item, containing a card -->
-                        <a href="" class="sousMenuDetail">
-                            <div>
-                                <div class="sousMenuPlat">
-                                    <h3 class="policeVignetteTitre">Oeuf au plat</h3>
-                                    <div class=""></div>
-                                    <div class="fusionIcone"></div>
-                                </div>
-                                <div class="sousMenuAccompagnements">
-                                    <p class="policeAccompagnements">Assaisonné à la truffe sur lit de caviar</p>
-                                    <p class="prixAccompagnements">20€</p>
-                                    <!-- apparait avec un conditionnment sur survol -->
-                                    <div class="selection">
-                                        <div class="selectionIcone">
-                                            <i class="fas fa-check-circle fa-2x"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
+                    <div class="sousMenuDetail"><!-- grid item, containing a card -->
+                        <div class="sousMenuPlat">
+                            <h3 class="policeVignetteTitre">Oeuf au plat</h3>
+                            <p class="policeAccompagnements">Assaisonné à la truffe sur lit de caviar</p>
+                        </div>
+                        <div class="sousMenuPrix">
+                            <p class="prixPlat">20€</p>
+                        </div>
+                            <!-- apparait avec un conditionnment sur survol -->
+                        <div class="sousMenuIcone">
+                            <i class="fas fa-check-circle fa-2x"></i>
+                        </div>
                     </div>
                 </div>
             <!-- Fin Menu Entrées -->  
@@ -124,68 +99,44 @@
             </div>
             <!-- Menu Plats -->
             <div class="sousMenu">
-                <div class=""><!-- grid item, containing a card -->
-                    <a href="" class="sousMenuDetail">
-                        <div>
-                            <div class="sousMenuPlat">
-                                <h3 class="policeVignetteTitre">Filet de boeuf aux herbes</h3>
-                                <div class=""></div>
-                                <div class="fusionIcone"></div>
-                            </div>
-                            <div class="sousMenuAccompagnements">
-                                <p class="policeAccompagnements">Accompagné de sa ribambelle de légumes</p>
-                                <p class="prixAccompagnements">40€</p>
-                                <!-- apparait avec un conditionnment sur survol -->
-                                <div class="selection">
-                                    <div class="selectionIcone">
-                                        <i class="fas fa-check-circle fa-2x"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
+                <div class="sousMenuDetail"><!-- grid item, containing a card -->
+                    <div class="sousMenuPlat">
+                        <h3 class="policeVignetteTitre">Filet de boeuf aux herbes</h3>
+                        <p class="policeAccompagnements">Accompagné de sa ribambelle de légumes</p>
+                    </div>
+                    <div class="sousMenuPrix">
+                        <p class="prixPlat">40€</p>
+                    </div>
+                        <!-- apparait avec un conditionnment sur survol -->
+                    <div class="sousMenuIcone">
+                        <i class="fas fa-check-circle fa-2x"></i>
+                    </div>
                 </div>
-                <div class=""><!-- grid item, containing a card -->
-                    <a href="" class="sousMenuDetail">
-                        <div>
-                            <div class="sousMenuPlat">
-                                <h3 class="policeVignetteTitre">Parmentier de queue de boeuf</h3>
-                                <div class=""></div>
-                                <div class="fusionIcone"></div>
-                            </div>
-                            <div class="sousMenuAccompagnements">
-                                <p class="policeAccompagnements">À la truffe noire sur sa purée de panais</p>
-                                <p class="prixAccompagnements">35€</p>
-                                <!-- apparait avec un conditionnment sur survol -->
-                                <div class="selection">
-                                    <div class="selectionIcone">
-                                        <i class="fas fa-check-circle fa-2x"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
+                <div class="sousMenuDetail"><!-- grid item, containing a card -->
+                    <div class="sousMenuPlat">
+                        <h3 class="policeVignetteTitre">Parmentier de queue de boeuf</h3>
+                        <p class="policeAccompagnements">À la truffe noire sur sa purée de panais</p>
+                    </div>
+                    <div class="sousMenuPrix">
+                        <p class="prixPlat">35€</p>
+                    </div>
+                        <!-- apparait avec un conditionnment sur survol -->
+                    <div class="sousMenuIcone">
+                        <i class="fas fa-check-circle fa-2x"></i>
+                    </div>
                 </div>
-                <div class=""><!-- grid item, containing a card -->
-                    <a href="" class="sousMenuDetail">
-                        <div>
-                            <div class="sousMenuPlat">
-                                <h3 class="policeVignetteTitre">Filet de turbot</h3>
-                                <div class=""></div>
-                                <div class="fusionIcone"></div>
-                            </div>
-                            <div class="sousMenuAccompagnements">
-                                <p class="policeAccompagnements">Aux agrumes</p>
-                                <p class="prixAccompagnements">44€</p>
-                                <!-- apparait avec un conditionnment sur survol -->
-                                <div class="selection">
-                                    <div class="selectionIcone">
-                                        <i class="fas fa-check-circle fa-2x"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
+                <div class="sousMenuDetail"><!-- grid item, containing a card -->
+                    <div class="sousMenuPlat">
+                        <h3 class="policeVignetteTitre">Filet de turbot</h3>
+                        <p class="policeAccompagnements">Aux agrumes</p>
+                    </div>
+                    <div class="sousMenuPrix">
+                        <p class="prixPlat">44€</p>
+                    </div>
+                        <!-- apparait avec un conditionnment sur survol -->
+                    <div class="sousMenuIcone">
+                        <i class="fas fa-check-circle fa-2x"></i>
+                    </div>
                 </div>
             </div>
             <!-- Fin Menu Plats -->
@@ -203,68 +154,44 @@
             </div>
             <!-- Menu Desserts  -->
             <div class="sousMenu">
-                <div class=""><!-- grid item, containing a card -->
-                    <a href="" class="sousMenuDetail">
-                        <div>
-                            <div class="sousMenuPlat">
-                                <h3 class="policeVignetteTitre">Paris-Brest</h3>
-                                <div class=""></div>
-                                <div class="fusionIcone"></div>
-                            </div>
-                            <div class="sousMenuAccompagnements">
-                                <p class="policeAccompagnements">Revisité</p>
-                                <p class="prixAccompagnements">18€</p>
-                                <!-- apparait avec un conditionnment sur survol -->
-                                <div class="selection">
-                                    <div class="selectionIcone">
-                                        <i class="fas fa-check-circle fa-2x"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
+                <div class="sousMenuDetail"><!-- grid item, containing a card -->
+                    <div class="sousMenuPlat">
+                        <h3 class="policeVignetteTitre">Paris-Brest</h3>
+                        <p class="policeAccompagnements">Revisité</p>
+                    </div>
+                    <div class="sousMenuPrix">
+                        <p class="prixPlat">18€</p>
+                    </div>
+                        <!-- apparait avec un conditionnment sur survol -->
+                    <div class="sousMenuIcone">
+                        <i class="fas fa-check-circle fa-2x"></i>
+                    </div>
                 </div>
-                <div class=""><!-- grid item, containing a card -->
-                    <a href="" class="sousMenuDetail">
-                        <div>
-                            <div class="sousMenuPlat">
-                                <h3 class="policeVignetteTitre">Macaron au chocolat d'exception</h3>
-                                <div class=""></div>
-                                <div class="fusionIcone"></div>
-                            </div>
-                            <div class="sousMenuAccompagnements">
-                                <p class="policeAccompagnements">Et glace à la vanille de Madagascar</p>
-                                <p class="prixAccompagnements">22€</p>
-                                <!-- apparait avec un conditionnment sur survol -->
-                                <div class="selection">
-                                    <div class="selectionIcone">
-                                        <i class="fas fa-check-circle fa-2x"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
+                <div class="sousMenuDetail"><!-- grid item, containing a card -->
+                    <div class="sousMenuPlat">
+                        <h3 class="policeVignetteTitre">Macaron au chocolat d'exception</h3>
+                        <p class="policeAccompagnements">Et glace à la vanille de Madagascar</p>
+                    </div>
+                    <div class="sousMenuPrix">
+                        <p class="prixPlat">22€</p>
+                    </div>
+                        <!-- apparait avec un conditionnment sur survol -->
+                    <div class="sousMenuIcone">
+                        <i class="fas fa-check-circle fa-2x"></i>
+                    </div>
                 </div>
-                <div class=""><!-- grid item, containing a card -->
-                    <a href="" class="sousMenuDetail">
-                        <div>
-                            <div class="sousMenuPlat">
-                                <h3 class="policeVignetteTitre">Mousse au chocolat</h3>
-                                <div class=""></div>
-                                <div class="fusionIcone"></div>
-                            </div>
-                            <div class="sousMenuAccompagnements">
-                                <p class="policeAccompagnements">Au piment d'Espelette et à la truffe noire</p>
-                                <p class="prixAccompagnements">23€</p>
-                                <!-- apparait avec un conditionnment sur survol -->
-                                <div class="selection">
-                                    <div class="selectionIcone">
-                                        <i class="fas fa-check-circle fa-2x"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
+                <div class="sousMenuDetail"><!-- grid item, containing a card -->
+                    <div class="sousMenuPlat">
+                        <h3 class="policeVignetteTitre">Mousse au chocolat</h3>
+                        <p class="policeAccompagnements">Au piment d'Espelette et à la truffe noire</p>
+                    </div>
+                    <div class="sousMenuPrix">
+                        <p class="prixPlat">23€</p>
+                    </div>
+                        <!-- apparait avec un conditionnment sur survol -->
+                    <div class="sousMenuIcone">
+                        <i class="fas fa-check-circle fa-2x"></i>
+                    </div>
                 </div>
             </div>
             <!-- Fin Menu Desserts -->

@@ -2,7 +2,7 @@
 Polices :
 Logo et titres: Shrikhand
 Texte: Roboto
-Version V 7.0 animations boutons */
+Version V 7.2 optimisations animations - simplification du code */
 
 /* Couleurs chartre graphique */
 $color-primaire: #9356DC;
@@ -84,6 +84,10 @@ a { /* Pour les balises liens de toute la page*/
     font-size: 18px;
     color: #333;
     margin: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-bottom: 5px;
   }
 
 /* H4 pour les vignettes et Fonctionnement */
