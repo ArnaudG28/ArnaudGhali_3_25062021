@@ -4,7 +4,7 @@ Pour les menus
 menu.css pour les différents menus
 Feuille de style pour le projet 3 ohmyfood
 Par Arnaud Ghali
-Version V 7.2 optimisations animations - simplification du code */ 
+Version V 8.0 final */ 
 
 
 @import "typography";
@@ -56,7 +56,7 @@ Version V 7.2 optimisations animations - simplification du code */
   grid-template-columns:60% 25% 15%;
   & .sousMenuIcone {
     opacity: 1;
-    color : white;
+    color: white;
     background-color: $color-tertiaire;
     transform: rotate(360deg);
     transition-duration: 0.5s;
@@ -64,7 +64,7 @@ Version V 7.2 optimisations animations - simplification du code */
     -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     -o-transform: rotate(360deg);
-  }
+}
 }
 
 /* Menus */
