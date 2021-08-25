@@ -5,12 +5,12 @@ index.css pour index.html
 ---------
 Feuille de style pour le projet 3 ohmyfood
 Par Arnaud Ghali
-Version V 7.1 animations loading spinner, apparitions des sous menus et coche */
+Version V 8.0 final */
 /* typographie commun 
 Polices :
 Logo et titres: Shrikhand
 Texte: Roboto
-Version V 7.0 animations boutons */
+Version V 8.0 final */
 /* Couleurs chartre graphique */
 /*Body généralités polices et fond*/
 html {
@@ -85,6 +85,10 @@ a {
   font-size: 18px;
   color: #333;
   margin: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-bottom: 5px;
 }
 
 /* H4 pour les vignettes et Fonctionnement */
@@ -412,17 +416,13 @@ a {
 }
 
 /* animation sur le coeur - au survol */
-.vignetteCoeur {
-  background-color: black;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition-property: background-color;
-  transition-duration: 3s;
-}
 .vignetteCoeur:hover {
-  background-color: #9356DC;
-  -webkit-background-clip: text;
+  animation: all;
+  transition: 0.8s;
+  opacity: 1;
+  background: #9356DC;
   -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
   font-weight: bold;
 }
 
@@ -530,12 +530,12 @@ Pour les menus
 menu.css pour les différents menus
 Feuille de style pour le projet 3 ohmyfood
 Par Arnaud Ghali
-Version V 7.1 animations loading spinner, apparitions des sous menus et coche */
+Version V 8.0 final */
 /* typographie commun 
 Polices :
 Logo et titres: Shrikhand
 Texte: Roboto
-Version V 7.0 animations boutons */
+Version V 8.0 final */
 /* Couleurs chartre graphique */
 /*Body généralités polices et fond*/
 html {
@@ -610,6 +610,10 @@ a {
   font-size: 18px;
   color: #333;
   margin: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-bottom: 5px;
 }
 
 /* H4 pour les vignettes et Fonctionnement */
@@ -674,56 +678,22 @@ a {
   }
 }
 /* Apparition de la coche */
-.selection {
-  opacity: 0;
-  position: relative;
-}
-
-.selectionIcone {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 100px;
-  height: 15px;
-  width: 15px;
-  background-color: #99E2D0;
-}
-
-.fusionIcone {
-  background-color: white;
-  border-top-right-radius: 5px;
-}
-
 .sousMenuDetail:hover {
   /*Puis au survol, soulevons la carte légèrement, rendons l’ombre plus prononcée et apparition de la coche*/
   top: -2px;
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+  grid-template-columns: 60% 25% 15%;
 }
-.sousMenuDetail:hover .selection {
+.sousMenuDetail:hover .sousMenuIcone {
   opacity: 1;
   color: white;
-  padding-left: 20px;
-  padding-right: 20px;
   background-color: #99E2D0;
-  border-bottom-right-radius: 5px;
-}
-.sousMenuDetail:hover .selectionIcone {
   transform: rotate(360deg);
   transition-duration: 0.5s;
   -webkit-transform: rotate(360deg);
   -moz-transform: rotate(360deg);
   -ms-transform: rotate(360deg);
   -o-transform: rotate(360deg);
-}
-.sousMenuDetail:hover .sousMenuAccompagnements {
-  grid-template-columns: 80% 10% 10%;
-}
-.sousMenuDetail:hover .sousMenuPlat {
-  grid-template-columns: 80% 10% 10%;
-}
-.sousMenuDetail:hover .fusionIcone {
-  background-color: #99E2D0;
-  border-top-right-radius: 5px;
 }
 
 /* Menus */
@@ -760,7 +730,9 @@ a {
   flex-direction: row;
   flex-wrap: wrap;
   align-content: center;
-  margin: auto;
+  margin-top: -45px;
+  position: relative;
+  height: 100%;
   background-color: #F2F2F2;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
@@ -803,16 +775,16 @@ a {
 
 .sousMenuDetail {
   /* chaque Plat*/
+  display: grid;
+  grid-template-columns: 80% 18% 2%;
+  grid-template-rows: auto;
+  line-height: 16px;
+  min-height: 100%;
+  position: relative;
   background: white;
   text-decoration: none;
   color: #444;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  line-height: 16px;
-  min-height: 100%;
-  position: relative;
   top: 0;
   padding: 0;
   border-bottom-right-radius: 5px;
@@ -825,23 +797,11 @@ a {
 
 /* Plat */
 .sousMenuPlat {
-  display: grid;
-  grid-template-columns: 97% 1% 2%;
-  grid-template-rows: auto;
-  padding-top: 0px;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Accompagnements*/
-.sousMenuAccompagnements {
-  display: grid;
-  grid-template-columns: 80% 19% 1%;
-  grid-template-rows: auto;
-  border-bottom-right-radius: 5px;
-  border-bottom-left-radius: 5px;
-}
-
 .policeAccompagnements {
   font-size: 14px;
   text-align: left;
@@ -849,13 +809,31 @@ a {
   color: gray;
   font-weight: 400;
   padding-left: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
-.prixAccompagnements {
+.sousMenuPrix {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.prixPlat {
   text-align: right;
   margin-top: 2%;
   font-weight: 500;
   padding-right: 5px;
+}
+
+.sousMenuIcone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  opacity: 0;
 }
 
 /* Bouton commander*/
@@ -893,26 +871,10 @@ a {
 /*Definition pour les responsives */
 /* Pour les ecrans type portable*/
 @media only screen and (max-width: 768px) {
-  /* Animations coche */
-  .sousMenuDetail:hover {
-    /*Puis au survol, soulevons la carte légèrement, rendons l’ombre plus prononcée et apparition de la coche*/
-  }
-  .sousMenuDetail:hover .sousMenuAccompagnements {
-    grid-template-columns: 75% 10% 15%;
-  }
-  .sousMenuDetail:hover .sousMenuPlat {
-    grid-template-columns: 75% 10% 15%;
-  }
-
   /* Menus */
   .flex-menus {
     flex-direction: column;
     align-items: center;
-    margin-left: 0;
-    margin-right: 0;
-    margin: 0;
-    padding: 0;
-    width: 100%;
   }
 
   .sousMenu {
@@ -926,7 +888,7 @@ a {
 Polices :
 Logo et titres: Shrikhand
 Texte: Roboto
-Version V 7.0 animations boutons */
+Version V 8.0 final */
 /* Couleurs chartre graphique */
 /*Body généralités polices et fond*/
 html {
@@ -1001,6 +963,10 @@ a {
   font-size: 18px;
   color: #333;
   margin: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-bottom: 5px;
 }
 
 /* H4 pour les vignettes et Fonctionnement */
@@ -1027,7 +993,7 @@ a {
   margin: 5px;
 }
 
-/* Version V 7.0 animations boutons */
+/* Version V 8.0 final */
 /* Header */
 .titreOhmyfood {
   display: flex;
