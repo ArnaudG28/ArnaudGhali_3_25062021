@@ -5,12 +5,12 @@ index.css pour index.html
 ---------
 Feuille de style pour le projet 3 ohmyfood
 Par Arnaud Ghali
-Version V 8.1 finale - rectification menu délice entrée et accéleration des animations spinner et menus */
+Version V 8.2 finale - modification de la rotation de l'icone lors du choix du menu sur la balise i */
 /* typographie commun 
 Polices :
 Logo et titres: Shrikhand
 Texte: Roboto
-Version V 8.1 finale - rectification menu délice entrée et accéleration des animations spinner et menus */
+Version V 8.2 finale - modification de la rotation de l'icone lors du choix du menu sur la balise i */
 /* Couleurs chartre graphique */
 /*Body généralités polices et fond*/
 html {
@@ -530,12 +530,12 @@ Pour les menus
 menu.css pour les différents menus
 Feuille de style pour le projet 3 ohmyfood
 Par Arnaud Ghali
-Version V 8.1 finale - rectification menu délice entrée et accéleration des animations spinner et menus */
+Version V 8.2 finale - modification de la rotation de l'icone lors du choix du menu sur la balise i */
 /* typographie commun 
 Polices :
 Logo et titres: Shrikhand
 Texte: Roboto
-Version V 8.1 finale - rectification menu délice entrée et accéleration des animations spinner et menus */
+Version V 8.2 finale - modification de la rotation de l'icone lors du choix du menu sur la balise i */
 /* Couleurs chartre graphique */
 /*Body généralités polices et fond*/
 html {
@@ -683,13 +683,16 @@ a {
   top: -2px;
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
   grid-template-columns: 60% 25% 15%;
+  transition-duration: 0.5s;
 }
 .sousMenuDetail:hover .sousMenuIcone {
   opacity: 1;
   color: white;
   background-color: #99E2D0;
+}
+.sousMenuDetail:hover i {
+  transition-duration: 1s;
   transform: rotate(360deg);
-  transition-duration: 0.5s;
   -webkit-transform: rotate(360deg);
   -moz-transform: rotate(360deg);
   -ms-transform: rotate(360deg);
@@ -888,7 +891,7 @@ a {
 Polices :
 Logo et titres: Shrikhand
 Texte: Roboto
-Version V 8.1 finale - rectification menu délice entrée et accéleration des animations spinner et menus */
+Version V 8.2 finale - modification de la rotation de l'icone lors du choix du menu sur la balise i */
 /* Couleurs chartre graphique */
 /*Body généralités polices et fond*/
 html {
@@ -993,7 +996,7 @@ a {
   margin: 5px;
 }
 
-/* Version V 8.1 finale - rectification menu délice entrée et accéleration des animations spinner et menus */
+/* Version V 8.2 finale - modification de la rotation de l'icone lors du choix du menu sur la balise i */
 /* Header */
 .titreOhmyfood {
   display: flex;
