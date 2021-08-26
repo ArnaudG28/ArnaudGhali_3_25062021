@@ -3,7 +3,7 @@ index.css pour index.html
 ---------
 Feuille de style pour le projet 3 ohmyfood
 Par Arnaud Ghali
-Version V 8.0 final */ 
+Version V 8.1 finale - rectification menu délice entrée et accéleration des animations spinner et menus */ 
 
 @import "typography";
 
@@ -18,9 +18,9 @@ Version V 8.0 final */
   left: 0;
   pointer-events: none;
   animation-name: spinChargement;
-  animation-duration: 3s;
-  animation: spinChargement 1s ease-in-out 3s forwards;
-  -webkit-animation: spinChargement 1s ease-in-out 3s forwards;
+  animation-duration: 2s;
+  animation: spinChargement 1s ease-in-out 2s forwards;
+  -webkit-animation: spinChargement 1s ease-in-out 2s forwards;
 }
 
 @keyframes spinChargement {
@@ -46,8 +46,8 @@ Version V 8.0 final */
   border-left: 16px solid $color-secondaire;
   width: 50px;
   height: 50px;
-  animation: spin 1.5s linear infinite;
-  -webkit-animation: spin 1.5s linear infinite;
+  animation: spin 1s linear infinite;
+  -webkit-animation: spin 1s linear infinite;
 }
 
 
@@ -292,6 +292,7 @@ Version V 8.0 final */
   top: -2px;
   box-shadow: 0 4px 5px rgba(0,0,0,0.2);
 }
+
 .vignetteD .imageVignetteRestaurant {
   padding-bottom: 50%;
   margin: 5px 5px 5px 5px;

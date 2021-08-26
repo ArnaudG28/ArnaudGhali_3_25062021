@@ -5,12 +5,12 @@ index.css pour index.html
 ---------
 Feuille de style pour le projet 3 ohmyfood
 Par Arnaud Ghali
-Version V 8.0 final */
+Version V 8.1 finale - rectification menu délice entrée et accéleration des animations spinner et menus */
 /* typographie commun 
 Polices :
 Logo et titres: Shrikhand
 Texte: Roboto
-Version V 8.0 final */
+Version V 8.1 finale - rectification menu délice entrée et accéleration des animations spinner et menus */
 /* Couleurs chartre graphique */
 /*Body généralités polices et fond*/
 html {
@@ -126,9 +126,9 @@ a {
   left: 0;
   pointer-events: none;
   animation-name: spinChargement;
-  animation-duration: 3s;
-  animation: spinChargement 1s ease-in-out 3s forwards;
-  -webkit-animation: spinChargement 1s ease-in-out 3s forwards;
+  animation-duration: 2s;
+  animation: spinChargement 1s ease-in-out 2s forwards;
+  -webkit-animation: spinChargement 1s ease-in-out 2s forwards;
 }
 
 @keyframes spinChargement {
@@ -153,8 +153,8 @@ a {
   border-left: 16px solid #FF79DA;
   width: 50px;
   height: 50px;
-  animation: spin 1.5s linear infinite;
-  -webkit-animation: spin 1.5s linear infinite;
+  animation: spin 1s linear infinite;
+  -webkit-animation: spin 1s linear infinite;
 }
 
 @keyframes spin {
@@ -530,12 +530,12 @@ Pour les menus
 menu.css pour les différents menus
 Feuille de style pour le projet 3 ohmyfood
 Par Arnaud Ghali
-Version V 8.0 final */
+Version V 8.1 finale - rectification menu délice entrée et accéleration des animations spinner et menus */
 /* typographie commun 
 Polices :
 Logo et titres: Shrikhand
 Texte: Roboto
-Version V 8.0 final */
+Version V 8.1 finale - rectification menu délice entrée et accéleration des animations spinner et menus */
 /* Couleurs chartre graphique */
 /*Body généralités polices et fond*/
 html {
@@ -647,8 +647,8 @@ a {
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   width: 100%;
-  animation: apparition 3s ease-in-out;
-  -webkit-animation: apparition 3s ease-in-out;
+  animation: apparition 2s ease-in-out;
+  -webkit-animation: apparition 2s ease-in-out;
 }
 
 .plats {
@@ -656,8 +656,8 @@ a {
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   width: 100%;
-  animation: apparition 6s ease-in-out;
-  -webkit-animation: apparition 6s ease-in-out;
+  animation: apparition 4s ease-in-out;
+  -webkit-animation: apparition 4s ease-in-out;
 }
 
 .desserts {
@@ -665,8 +665,8 @@ a {
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   width: 100%;
-  animation: apparition 9s ease-in-out;
-  -webkit-animation: apparition 9s ease-in-out;
+  animation: apparition 6s ease-in-out;
+  -webkit-animation: apparition 6s ease-in-out;
 }
 
 @keyframes apparition {
@@ -888,7 +888,7 @@ a {
 Polices :
 Logo et titres: Shrikhand
 Texte: Roboto
-Version V 8.0 final */
+Version V 8.1 finale - rectification menu délice entrée et accéleration des animations spinner et menus */
 /* Couleurs chartre graphique */
 /*Body généralités polices et fond*/
 html {
@@ -993,7 +993,7 @@ a {
   margin: 5px;
 }
 
-/* Version V 8.0 final */
+/* Version V 8.1 finale - rectification menu délice entrée et accéleration des animations spinner et menus */
 /* Header */
 .titreOhmyfood {
   display: flex;

@@ -4,9 +4,9 @@ Pour les menus
 menu.css pour les différents menus
 Feuille de style pour le projet 3 ohmyfood
 Par Arnaud Ghali
-Version V 8.0 final */ 
+Version V 8.1 finale - rectification menu délice entrée et accéleration des animations spinner et menus */ 
 
-
+ 
 @import "typography";
 
 /* Animations */
@@ -16,9 +16,9 @@ Version V 8.0 final */
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
-  width : 100%;
-  animation: apparition 3s ease-in-out;
-  -webkit-animation: apparition 3s ease-in-out;
+  width: 100%;
+  animation: apparition 2s ease-in-out;
+  -webkit-animation: apparition 2s ease-in-out;
 }
 
 .plats {
@@ -26,8 +26,8 @@ Version V 8.0 final */
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   width: 100%;
-  animation: apparition 6s ease-in-out;
-  -webkit-animation: apparition 6s ease-in-out;
+  animation: apparition 4s ease-in-out;
+  -webkit-animation: apparition 4s ease-in-out;
 }
 
 .desserts {
@@ -35,8 +35,8 @@ Version V 8.0 final */
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   width: 100%;
-  animation: apparition 9s ease-in-out;
-  -webkit-animation: apparition 9s ease-in-out;
+  animation: apparition 6s ease-in-out;
+  -webkit-animation: apparition 6s ease-in-out;
 }
 
 @keyframes apparition {
@@ -64,7 +64,7 @@ Version V 8.0 final */
     -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     -o-transform: rotate(360deg);
-}
+  }
 }
 
 /* Menus */
