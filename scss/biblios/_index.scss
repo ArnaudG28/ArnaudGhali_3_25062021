@@ -3,7 +3,7 @@ index.css pour index.html
 ---------
 Feuille de style pour le projet 3 ohmyfood
 Par Arnaud Ghali
-Version V. 9 finale - modification suite à soutenance */ 
+Version V. 9.1 finale - modification suite à soutenance */ 
 
 @import "typography";
 
@@ -135,7 +135,7 @@ Version V. 9 finale - modification suite à soutenance */
 }
 
 .explorationRecherche {
-  background: linear-gradient(to bottom, $color-secondaire 5%, $color-secondaire 8%, $color-primaire 50%, $color-primaire 75%,$color-primaire 85%); 
+  background: linear-gradient($color-secondaire 0%, $color-primaire 100%);
   height: 50px;
   width: 50%;
   box-shadow: 0 4px 5px rgba(0,0,0,0.2);
@@ -194,7 +194,7 @@ Version V. 9 finale - modification suite à soutenance */
   width: 33%;
 /* animation sur les boutons - au survol */
   &:hover {
-    background-color: rgba($color-primaire, 0.15);
+    background-color: rgba($color-primaire, 0.20);
     top: -2px;
     box-shadow: 0 4px 5px rgba(0,0,0,0.2);
     & .fonctionnementIcon{
@@ -341,7 +341,7 @@ object-fit: cover;
       animation: all;
       transition: 0.8s;
       opacity: 1;
-      background: $color-primaire;
+      background: linear-gradient($color-secondaire 0%, $color-primaire 100%);
       -webkit-text-fill-color: transparent;
       -webkit-background-clip: text;
       font-weight: bold;
