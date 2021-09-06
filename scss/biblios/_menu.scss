@@ -4,7 +4,7 @@ Pour les menus
 menu.css pour les différents menus
 Feuille de style pour le projet 3 ohmyfood
 Par Arnaud Ghali
-Version V 8.3 finale - modification apparition de la coche pour adaptation différents navigateurs */ 
+Version V. 9 finale - modification suite à soutenance */ 
 
  
 @import "typography";
@@ -48,11 +48,28 @@ Version V 8.3 finale - modification apparition de la coche pour adaptation diff�
   }
 }
 
+/* animation sur le coeur - au survol */
+.vignetteCoeur {
+
+  &:hover {
+    animation: all;
+    transition: 0.8s;
+    opacity: 1;
+    background: $color-primaire;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-weight: bold;
+    cursor:pointer;
+  }
+}
+
+
 /* Apparition de la coche */
 
 .sousMenuDetail:hover { /*Puis au survol, soulevons la carte légèrement, rendons l’ombre plus prononcée et apparition de la coche*/
   top: -2px;
   box-shadow: 0 4px 5px rgba(0,0,0,0.2);
+  cursor:pointer;
 
   & .sousMenuPrix{
     transition-duration: 1s;

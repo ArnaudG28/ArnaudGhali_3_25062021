@@ -3,7 +3,7 @@ index.css pour index.html
 ---------
 Feuille de style pour le projet 3 ohmyfood
 Par Arnaud Ghali
-Version V 8.3 finale - modification apparition de la coche pour adaptation diff√©rents navigateurs */ 
+Version V. 9 finale - modification suite √† soutenance */ 
 
 @import "typography";
 
@@ -114,6 +114,9 @@ Version V 8.3 finale - modification apparition de la coche pour adaptation diff√
 .explorationSoustitre{
     display:flex;
     text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    margin: 5px;
     color:gray;
     font-weight: 400;
 }
@@ -132,10 +135,10 @@ Version V 8.3 finale - modification apparition de la coche pour adaptation diff√
 }
 
 .explorationRecherche {
-  background: linear-gradient(to right, $color-secondaire 10%, $color-secondaire 25%, $color-secondaire 50%, $color-primaire 75%,$color-primaire 85%); 
+  background: linear-gradient(to bottom, $color-secondaire 5%, $color-secondaire 8%, $color-primaire 50%, $color-primaire 75%,$color-primaire 85%); 
   height: 50px;
   width: 50%;
-  box-shadow: 4px 4px 6px #000;
+  box-shadow: 0 4px 5px rgba(0,0,0,0.2);
   border: none;
   border-radius: 25px 25px 25px 25px;
   padding: 0 24px;
@@ -148,9 +151,20 @@ Version V 8.3 finale - modification apparition de la coche pour adaptation diff√
   -moz-border-radius: 25px 25px 25px 25px;
   -ms-border-radius: 25px 25px 25px 25px;
   -o-border-radius: 25px 25px 25px 25px;
+    /* animation sur les boutons - au survol */
+    &:hover {
+      top: -2px;
+      box-shadow: 4px 4px 6px #000;
+    }
 }
 
 /* Partie fonctionnement */
+
+/* Partie resultat*/
+.flex-fonctionnement {
+  padding-top: 30px;
+}
+
 .fonctionnement {
   display: flex;
   flex-direction: row;
@@ -159,6 +173,7 @@ Version V 8.3 finale - modification apparition de la coche pour adaptation diff√
   margin-bottom: 16px;
   width : 100%;
   padding-left: 20px;
+  padding-top: 15px;
 }
 
 .fonctionnementStep {
@@ -172,14 +187,19 @@ Version V 8.3 finale - modification apparition de la coche pour adaptation diff√
   transition-duration: 0.1s;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   padding: 32px;
-  background-color: #f2e9f3;
+  background-color: #F2F2F2;
   position: relative;
   font-size: large; 
   font-weight: bold;
   width: 33%;
 /* animation sur les boutons - au survol */
   &:hover {
-    background:linear-gradient(to right, $color-secondaire 10%, $color-secondaire 25%, $color-secondaire 50%, $color-primaire 75%,$color-primaire 85%);
+    background-color: rgba($color-primaire, 0.15);
+    top: -2px;
+    box-shadow: 0 4px 5px rgba(0,0,0,0.2);
+    & .fonctionnementIcon{
+      color : $color-primaire;
+    }
   }
 }
 
@@ -196,7 +216,7 @@ Version V 8.3 finale - modification apparition de la coche pour adaptation diff√
 }
 
 .fonctionnementIcon {
-  color : $color-primaire;
+  color :gray;
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -232,6 +252,8 @@ Version V 8.3 finale - modification apparition de la coche pour adaptation diff√
   display : flex;
   flex-direction: row;
   text-align: left;
+  padding-bottom: 15px;
+  padding-top: 30px;
 }
 
 .vignette { /* Grid vignette Restaurant*/
@@ -254,7 +276,7 @@ Version V 8.3 finale - modification apparition de la coche pour adaptation diff√
   display: flex;
   flex : 1;
   flex-direction: column; 
-  line-height: 16px;
+  /*line-height: 16px;*/
   min-height: 100%;
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
@@ -282,28 +304,34 @@ Version V 8.3 finale - modification apparition de la coche pour adaptation diff√
   -o-border-radius: 5px;
 }
 
-.vignetteContent {/* texte de la vignette */
+/* texte de la vignette */
+.vignetteContent {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.vignetteD:hover { /*Puis au survol, soulevons la carte l√©g√®rement et rendons l‚Äôombre plus prononc√©e */
+/*Puis au survol, soulevons la carte l√©g√®rement et rendons l‚Äôombre plus prononc√©e */
+.vignetteD:hover { 
   top: -2px;
   box-shadow: 0 4px 5px rgba(0,0,0,0.2);
 }
 
 .vignetteD .imageVignetteRestaurant {
-  padding-bottom: 50%;
+  /*padding-bottom: 50%;
   margin: 5px 5px 5px 5px;
   background-size:cover;
-  background-position: center center;
+  background-position: center center;*/
 }
 
 .imageVignetteRestaurant {
 border-top-right-radius: 5px;
 border-top-left-radius: 5px;
-object-fit: cover;/* rempli le contenu dans la dimension*/
+width: 100%;
+max-height: 300px;
+height:300px;
+/* rempli le contenu dans la dimension*/
+object-fit: cover;
 }
 
 /* animation sur le coeur - au survol */
@@ -317,6 +345,7 @@ object-fit: cover;/* rempli le contenu dans la dimension*/
       -webkit-text-fill-color: transparent;
       -webkit-background-clip: text;
       font-weight: bold;
+      cursor:pointer;
     }
 }
 
@@ -354,8 +383,10 @@ object-fit: cover;/* rempli le contenu dans la dimension*/
     margin-left: 0;
     margin-right: 0;
     margin-bottom: 16px;
+    padding-bottom:30px;
     width: 100%;
   }
+
   .fonctionnementStep {
     display: flex;
     align-items: center;
@@ -366,7 +397,7 @@ object-fit: cover;/* rempli le contenu dans la dimension*/
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     padding: 24px;
     background-color: #f2e9f3;
-    width: 80%;
+    width: 70%;
   }
 
 
@@ -394,12 +425,15 @@ object-fit: cover;/* rempli le contenu dans la dimension*/
     margin-left: 0;
   }
 
+  .imageVignetteRestaurant {
+    max-height: 180px;
+    height:180px;
+    }
 
 
 }
 /* Pour les ecrans type tablette */
 @media (min-width: 769px) and (max-width:991px) {
-
 
   /* Resultat */
   .flex-resultat{
@@ -412,7 +446,6 @@ object-fit: cover;/* rempli le contenu dans la dimension*/
     width :100%;
   }
  
-  
 /* Restaurants */
   .flex-restaurant{ 
     width:100%;

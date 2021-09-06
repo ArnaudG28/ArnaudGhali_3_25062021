@@ -5,12 +5,12 @@ index.css pour index.html
 ---------
 Feuille de style pour le projet 3 ohmyfood
 Par Arnaud Ghali
-Version V 8.3 finale - modification apparition de la coche pour adaptation différents navigateurs */
+Version V. 9 finale - modification suite à soutenance */
 /* typographie commun 
 Polices :
 Logo et titres: Shrikhand
 Texte: Roboto
-Version V 8.3 finale - modification apparition de la coche pour adaptation différents navigateurs */
+Version V. 9 finale - modification suite à soutenance */
 /* Couleurs chartre graphique */
 /*Body généralités polices et fond*/
 html {
@@ -20,6 +20,7 @@ html {
 
 body {
   background-color: white;
+  margin: 0;
 }
 
 header {
@@ -219,6 +220,9 @@ a {
 .explorationSoustitre {
   display: flex;
   text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  margin: 5px;
   color: gray;
   font-weight: 400;
 }
@@ -236,10 +240,10 @@ a {
 }
 
 .explorationRecherche {
-  background: linear-gradient(to right, #FF79DA 10%, #FF79DA 25%, #FF79DA 50%, #9356DC 75%, #9356DC 85%);
+  background: linear-gradient(to bottom, #FF79DA 5%, #FF79DA 8%, #9356DC 50%, #9356DC 75%, #9356DC 85%);
   height: 50px;
   width: 50%;
-  box-shadow: 4px 4px 6px #000;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
   border: none;
   border-radius: 25px 25px 25px 25px;
   padding: 0 24px;
@@ -252,9 +256,19 @@ a {
   -moz-border-radius: 25px 25px 25px 25px;
   -ms-border-radius: 25px 25px 25px 25px;
   -o-border-radius: 25px 25px 25px 25px;
+  /* animation sur les boutons - au survol */
+}
+.explorationRecherche:hover {
+  top: -2px;
+  box-shadow: 4px 4px 6px #000;
 }
 
 /* Partie fonctionnement */
+/* Partie resultat*/
+.flex-fonctionnement {
+  padding-top: 30px;
+}
+
 .fonctionnement {
   display: flex;
   flex-direction: row;
@@ -263,6 +277,7 @@ a {
   margin-bottom: 16px;
   width: 100%;
   padding-left: 20px;
+  padding-top: 15px;
 }
 
 .fonctionnementStep {
@@ -276,7 +291,7 @@ a {
   transition-duration: 0.1s;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   padding: 32px;
-  background-color: #f2e9f3;
+  background-color: #F2F2F2;
   position: relative;
   font-size: large;
   font-weight: bold;
@@ -284,7 +299,12 @@ a {
   /* animation sur les boutons - au survol */
 }
 .fonctionnementStep:hover {
-  background: linear-gradient(to right, #FF79DA 10%, #FF79DA 25%, #FF79DA 50%, #9356DC 75%, #9356DC 85%);
+  background-color: rgba(147, 86, 220, 0.15);
+  top: -2px;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+}
+.fonctionnementStep:hover .fonctionnementIcon {
+  color: #9356DC;
 }
 
 .fonctionnementNombre {
@@ -300,7 +320,7 @@ a {
 }
 
 .fonctionnementIcon {
-  color: #9356DC;
+  color: gray;
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -336,6 +356,8 @@ a {
   display: flex;
   flex-direction: row;
   text-align: left;
+  padding-bottom: 15px;
+  padding-top: 30px;
 }
 
 .vignette {
@@ -360,7 +382,7 @@ a {
   display: flex;
   flex: 1;
   flex-direction: column;
-  line-height: 16px;
+  /*line-height: 16px;*/
   min-height: 100%;
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
@@ -388,31 +410,34 @@ a {
   -o-border-radius: 5px;
 }
 
+/* texte de la vignette */
 .vignetteContent {
-  /* texte de la vignette */
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+/*Puis au survol, soulevons la carte légèrement et rendons l’ombre plus prononcée */
 .vignetteD:hover {
-  /*Puis au survol, soulevons la carte légèrement et rendons l’ombre plus prononcée */
   top: -2px;
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
 }
 
 .vignetteD .imageVignetteRestaurant {
-  padding-bottom: 50%;
+  /*padding-bottom: 50%;
   margin: 5px 5px 5px 5px;
-  background-size: cover;
-  background-position: center center;
+  background-size:cover;
+  background-position: center center;*/
 }
 
 .imageVignetteRestaurant {
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
-  object-fit: cover;
+  width: 100%;
+  max-height: 300px;
+  height: 300px;
   /* rempli le contenu dans la dimension*/
+  object-fit: cover;
 }
 
 /* animation sur le coeur - au survol */
@@ -424,6 +449,7 @@ a {
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   font-weight: bold;
+  cursor: pointer;
 }
 
 /*Definition pour les responsives */
@@ -458,6 +484,7 @@ a {
     margin-left: 0;
     margin-right: 0;
     margin-bottom: 16px;
+    padding-bottom: 30px;
     width: 100%;
   }
 
@@ -471,7 +498,7 @@ a {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 24px;
     background-color: #f2e9f3;
-    width: 80%;
+    width: 70%;
   }
 
   /* Resultat */
@@ -496,6 +523,11 @@ a {
     grid-template-columns: 1fr;
     align-content: space-between;
     margin-left: 0;
+  }
+
+  .imageVignetteRestaurant {
+    max-height: 180px;
+    height: 180px;
   }
 }
 /* Pour les ecrans type tablette */
@@ -530,12 +562,12 @@ Pour les menus
 menu.css pour les différents menus
 Feuille de style pour le projet 3 ohmyfood
 Par Arnaud Ghali
-Version V 8.3 finale - modification apparition de la coche pour adaptation différents navigateurs */
+Version V. 9 finale - modification suite à soutenance */
 /* typographie commun 
 Polices :
 Logo et titres: Shrikhand
 Texte: Roboto
-Version V 8.3 finale - modification apparition de la coche pour adaptation différents navigateurs */
+Version V. 9 finale - modification suite à soutenance */
 /* Couleurs chartre graphique */
 /*Body généralités polices et fond*/
 html {
@@ -545,6 +577,7 @@ html {
 
 body {
   background-color: white;
+  margin: 0;
 }
 
 header {
@@ -677,11 +710,24 @@ a {
     opacity: 1;
   }
 }
+/* animation sur le coeur - au survol */
+.vignetteCoeur:hover {
+  animation: all;
+  transition: 0.8s;
+  opacity: 1;
+  background: #9356DC;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  font-weight: bold;
+  cursor: pointer;
+}
+
 /* Apparition de la coche */
 .sousMenuDetail:hover {
   /*Puis au survol, soulevons la carte légèrement, rendons l’ombre plus prononcée et apparition de la coche*/
   top: -2px;
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
   grid-template-columns: 70% 20% 10%;
 }
 .sousMenuDetail:hover .sousMenuPrix {
@@ -901,7 +947,7 @@ a {
 Polices :
 Logo et titres: Shrikhand
 Texte: Roboto
-Version V 8.3 finale - modification apparition de la coche pour adaptation différents navigateurs */
+Version V. 9 finale - modification suite à soutenance */
 /* Couleurs chartre graphique */
 /*Body généralités polices et fond*/
 html {
@@ -911,6 +957,7 @@ html {
 
 body {
   background-color: white;
+  margin: 0;
 }
 
 header {
@@ -1006,7 +1053,7 @@ a {
   margin: 5px;
 }
 
-/* Version V 8.3 finale - modification apparition de la coche pour adaptation différents navigateurs */
+/* Version V. 9 finale - modification suite à soutenance */
 /* Header */
 .titreOhmyfood {
   display: flex;
