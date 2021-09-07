@@ -1,0 +1,1163 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
+/*
+index.css pour index.html
+---------
+Feuille de style pour le projet 3 ohmyfood
+Par Arnaud Ghali
+Version V. 9.2 finale - modification suite à soutenance */
+/* typographie commun 
+Polices :
+Logo et titres: Shrikhand
+Texte: Roboto
+Version V. 9.2 finale - modification suite à soutenance */
+/* Couleurs chartre graphique */
+/*Body généralités polices et fond*/
+html {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+
+body {
+  background-color: white;
+  margin: 0;
+}
+
+header {
+  background-color: white;
+}
+
+a {
+  /* Pour les balises liens de toute la page*/
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Définition des tailles de polices */
+/* H1 pour le titre principal */
+.policeH1 {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 32px;
+  color: #333;
+  width: 100%;
+  text-align: center;
+}
+
+/* H1 pour le titre des restaurants dans les menus */
+.policeH1Menu {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 25px;
+  color: #333;
+  width: 100%;
+}
+
+/* H2 pour les titres des containers */
+.policeH2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  color: #333;
+  margin: 5px;
+}
+
+.policeH2Menu {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  color: gray;
+  margin: 5px;
+}
+
+.policeH3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  color: #333;
+  margin: 5px;
+}
+
+.policeH4 {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  color: #333;
+  margin: 5px;
+}
+
+/* H3 pour les vignettes */
+.policeVignetteTitre {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  color: #333;
+  margin: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-bottom: 5px;
+}
+
+/* H4 pour les vignettes et Fonctionnement */
+.policeVignette {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  color: #333;
+  margin: 5px;
+}
+
+/* H3 pour le footer*/
+.policeFooterTitre {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 20px;
+  color: white;
+  margin: 5px;
+}
+
+/* H3 pour le footer*/
+.policeFooter {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  color: white;
+  margin: 5px;
+}
+
+/* loading spinner */
+.spinChargement {
+  background: white;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  animation-name: spinChargement;
+  animation-duration: 2s;
+  animation: spinChargement 1s ease-in-out 2s forwards;
+  -webkit-animation: spinChargement 1s ease-in-out 2s forwards;
+}
+
+@keyframes spinChargement {
+  0% {
+    opacity: 1;
+    z-index: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: 0;
+  }
+}
+.spin {
+  vertical-align: middle;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  border-radius: 50%;
+  border-top: 16px solid #9356DC;
+  border-right: 16px solid #FF79DA;
+  border-bottom: 16px solid #9356DC;
+  border-left: 16px solid #FF79DA;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  -webkit-animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+  }
+}
+.spinText {
+  vertical-align: middle;
+  position: absolute;
+  top: 60%;
+  left: 48%;
+  font-family: "Shrikhand", sans-serif;
+  font-size: 32px;
+  color: #333;
+  text-align: center;
+}
+
+/* Localisation */
+.flex-localisation {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  margin: auto;
+  width: 100%;
+}
+
+.localisation {
+  background: #c2bfbfbb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+}
+
+/* Exploration */
+.exploration {
+  background: #F2F2F2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.explorationTitre {
+  display: flex;
+  text-align: center;
+  padding-top: 40px;
+}
+
+.explorationSoustitre {
+  display: flex;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  margin: 5px;
+  color: gray;
+  font-weight: 400;
+}
+
+/* Bouton */
+.explorationButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  padding-bottom: 40px;
+  background-color: #F2F2F2;
+  height: 100%;
+  width: 100%;
+}
+
+.explorationRecherche {
+  background: linear-gradient(#FF79DA 0%, #9356DC 100%);
+  height: 50px;
+  width: 50%;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+  border: none;
+  border-radius: 25px 25px 25px 25px;
+  padding: 0 24px;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  color: white;
+  margin: 5px;
+  -webkit-border-radius: 25px 25px 25px 25px;
+  -moz-border-radius: 25px 25px 25px 25px;
+  -ms-border-radius: 25px 25px 25px 25px;
+  -o-border-radius: 25px 25px 25px 25px;
+  /* animation sur les boutons - au survol */
+}
+.explorationRecherche:hover {
+  top: -2px;
+  box-shadow: 4px 4px 6px #000;
+}
+
+/* Partie fonctionnement */
+/* Partie resultat*/
+.flex-fonctionnement {
+  padding-top: 30px;
+}
+
+.fonctionnement {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 32px;
+  margin-bottom: 16px;
+  width: 100%;
+  padding-left: 20px;
+  padding-top: 15px;
+}
+
+.fonctionnementStep {
+  display: flex;
+  align-items: center;
+  margin-right: 32px;
+  border: 2px solid #d9d9d9;
+  border-radius: 32px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  transition-duration: 0.1s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 32px;
+  background-color: #F2F2F2;
+  position: relative;
+  font-size: large;
+  font-weight: bold;
+  width: 33%;
+  /* animation sur les boutons - au survol */
+}
+.fonctionnementStep:hover {
+  background-color: rgba(147, 86, 220, 0.2);
+  top: -2px;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+}
+.fonctionnementStep:hover .fonctionnementIcon {
+  color: #9356DC;
+}
+
+.fonctionnementNombre {
+  background-color: #9356DC;
+  color: white;
+  border-radius: 50%;
+  padding: 5px 10px;
+  margin-left: -45px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.fonctionnementIcon {
+  color: gray;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* Partie resultat*/
+.flex-resultat {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  margin: auto;
+  background-color: #F2F2F2;
+}
+
+/*Restaurant*/
+.flex-restaurant {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  top: 0;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.titreRestaurant {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  padding-bottom: 15px;
+  padding-top: 30px;
+}
+
+/* Grid vignette Restaurant*/
+.vignette {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 20px;
+  background-color: #F2F2F2;
+  width: 90%;
+  align-content: space-between;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+/* chaque vignette Restaurant*/
+.vignetteD {
+  background: white;
+  text-decoration: none;
+  color: #444;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  /*line-height: 16px;*/
+  min-height: 100%;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  position: relative;
+  top: 0;
+  padding: 0;
+}
+
+.vignetteN {
+  /*Logo Nouveau*/
+  background-color: #99E2D0;
+  color: green;
+  font-size: large;
+  font-weight: bold;
+  padding: 8px 15px 8px 15px;
+  border-radius: 5px;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+/* texte de la vignette */
+.vignetteContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*Puis au survol, soulevons la carte légèrement et rendons l’ombre plus prononcée */
+.vignetteD:hover {
+  top: -2px;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+}
+
+.vignetteD .imageVignetteRestaurant {
+  /*padding-bottom: 50%;
+  margin: 5px 5px 5px 5px;
+  background-size:cover;
+  background-position: center center;*/
+}
+
+.imageVignetteRestaurant {
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  width: 100%;
+  max-height: 300px;
+  height: 300px;
+  /* rempli le contenu dans la dimension*/
+  object-fit: cover;
+}
+
+/* animation sur le coeur - au survol */
+.vignetteCoeur:hover {
+  animation: all;
+  transition: 0.8s;
+  opacity: 1;
+  background: linear-gradient(#FF79DA 0%, #9356DC 100%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/*Definition pour les responsives */
+/* Pour les ecrans type portable*/
+@media only screen and (max-width: 768px) {
+  /* loading spinner */
+  .spin {
+    top: 20%;
+    left: 35%;
+  }
+
+  .spinText {
+    top: 30%;
+    left: 25%;
+  }
+
+  /* Exploration */
+  .explorationTitre {
+    width: 70%;
+  }
+
+  .explorationRecherche {
+    height: 50px;
+    width: 75%;
+  }
+
+  /* Fonctionnement */
+  .fonctionnement {
+    flex-direction: column;
+    align-items: center;
+    align-content: space-between;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 16px;
+    padding-bottom: 30px;
+    width: 100%;
+  }
+
+  .fonctionnementStep {
+    display: flex;
+    align-items: center;
+    border: 2px solid #d9d9d9;
+    border-radius: 32px;
+    cursor: pointer;
+    transition-duration: 0.1s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 24px;
+    background-color: #f2e9f3;
+    width: 70%;
+  }
+
+  /* Resultat */
+  .flex-resultat {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+    margin-right: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  /* Restaurants */
+  .flex-restaurant {
+    width: 100%;
+    margin-left: 0;
+    padding-left: 5px;
+  }
+
+  .vignette {
+    grid-template-columns: 1fr;
+    align-content: space-between;
+    margin-left: 0;
+  }
+
+  .imageVignetteRestaurant {
+    max-height: 180px;
+    height: 180px;
+  }
+}
+/* Pour les ecrans type tablette */
+@media (min-width: 769px) and (max-width: 991px) {
+  /* Resultat */
+  .flex-resultat {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+    margin-right: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  /* Restaurants */
+  .flex-restaurant {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .vignette {
+    grid-template-columns: 1fr 1fr;
+    background-color: white;
+    align-content: space-between;
+    margin-left: 0;
+  }
+}
+/* Pour les ecrans type desktop */
+/*---------
+Pour les menus
+menu.css pour les différents menus
+Feuille de style pour le projet 3 ohmyfood
+Par Arnaud Ghali
+Version V. 9.2 finale - modification suite à soutenance */
+/* typographie commun 
+Polices :
+Logo et titres: Shrikhand
+Texte: Roboto
+Version V. 9.2 finale - modification suite à soutenance */
+/* Couleurs chartre graphique */
+/*Body généralités polices et fond*/
+html {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+
+body {
+  background-color: white;
+  margin: 0;
+}
+
+header {
+  background-color: white;
+}
+
+a {
+  /* Pour les balises liens de toute la page*/
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Définition des tailles de polices */
+/* H1 pour le titre principal */
+.policeH1 {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 32px;
+  color: #333;
+  width: 100%;
+  text-align: center;
+}
+
+/* H1 pour le titre des restaurants dans les menus */
+.policeH1Menu {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 25px;
+  color: #333;
+  width: 100%;
+}
+
+/* H2 pour les titres des containers */
+.policeH2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  color: #333;
+  margin: 5px;
+}
+
+.policeH2Menu {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  color: gray;
+  margin: 5px;
+}
+
+.policeH3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  color: #333;
+  margin: 5px;
+}
+
+.policeH4 {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  color: #333;
+  margin: 5px;
+}
+
+/* H3 pour les vignettes */
+.policeVignetteTitre {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  color: #333;
+  margin: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-bottom: 5px;
+}
+
+/* H4 pour les vignettes et Fonctionnement */
+.policeVignette {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  color: #333;
+  margin: 5px;
+}
+
+/* H3 pour le footer*/
+.policeFooterTitre {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 20px;
+  color: white;
+  margin: 5px;
+}
+
+/* H3 pour le footer*/
+.policeFooter {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  color: white;
+  margin: 5px;
+}
+
+/* Animations */
+/* Apparition des sous-menus puis des plats au fur et à mesure*/
+.entrees {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  width: 100%;
+  animation: apparition 1.25s ease-in-out;
+  -webkit-animation: apparition 1.25s ease-in-out;
+}
+.entrees .sousMenuDetail1 {
+  animation: apparition 0.25s ease-in-out;
+  -webkit-animation: apparition 0.25s ease-in-out;
+}
+.entrees .sousMenuDetail2 {
+  animation: apparition 0.5s ease-in-out;
+  -webkit-animation: apparition 0.5s ease-in-out;
+}
+.entrees .sousMenuDetail3 {
+  animation: apparition 1s ease-in-out;
+  -webkit-animation: apparition 1s ease-in-out;
+}
+.entrees .sousMenuDetail4 {
+  animation: apparition 1.25s ease-in-out;
+  -webkit-animation: apparition 1.25s ease-in-out;
+}
+
+.plats {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  width: 100%;
+  animation: apparition 1.5s ease-in-out;
+  -webkit-animation: apparition 1.5s ease-in-out;
+}
+.plats .sousMenuDetail1 {
+  animation: apparition 0.25s ease-in-out;
+  -webkit-animation: apparition 0.25s ease-in-out;
+}
+.plats .sousMenuDetail2 {
+  animation: apparition 0.5s ease-in-out;
+  -webkit-animation: apparition 0.5s ease-in-out;
+}
+.plats .sousMenuDetail3 {
+  animation: apparition 1s ease-in-out;
+  -webkit-animation: apparition 1s ease-in-out;
+}
+
+.desserts {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  width: 100%;
+  animation: apparition 1.75s ease-in-out;
+  -webkit-animation: apparition 1.75s ease-in-out;
+}
+.desserts .sousMenuDetail1 {
+  animation: apparition 0.25s ease-in-out;
+  -webkit-animation: apparition 0.25s ease-in-out;
+}
+.desserts .sousMenuDetail2 {
+  animation: apparition 0.5s ease-in-out;
+  -webkit-animation: apparition 0.5s ease-in-out;
+}
+.desserts .sousMenuDetail3 {
+  animation: apparition 1s ease-in-out;
+  -webkit-animation: apparition 1s ease-in-out;
+}
+
+@keyframes apparition {
+  from {
+    opacity: 0;
+    transform: translateY(-25px);
+    -webkit-transform: translateY(-25px);
+    -moz-transform: translateY(-25px);
+    -ms-transform: translateY(-25px);
+    -o-transform: translateY(-25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    -o-transform: translateY(0px);
+  }
+}
+/* animation sur le coeur - au survol */
+.vignetteCoeur:hover {
+  animation: all;
+  transition: 0.8s;
+  opacity: 1;
+  background: linear-gradient(#FF79DA 0%, #9356DC 100%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Apparition de la coche */
+/*Puis au survol, soulevons la carte légèrement, rendons l’ombre plus prononcée et apparition de la coche*/
+.sousMenuDetail:hover {
+  top: -2px;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  grid-template-columns: 70% 20% 10%;
+}
+.sousMenuDetail:hover .sousMenuPrix {
+  transition-duration: 1s;
+  margin-right: 32px;
+}
+.sousMenuDetail:hover .sousMenuIcone {
+  opacity: 1;
+  color: white;
+  background-color: #99E2D0;
+  transition-duration: 1s;
+  margin-left: -32px;
+}
+.sousMenuDetail:hover i {
+  transition-duration: 1s;
+  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+}
+
+/* Menus */
+.imageRestaurant {
+  height: 300px;
+  width: 100%;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  background-size: cover;
+  background-position: center center;
+  /* rempli le contenu dans la dimension*/
+  object-fit: cover;
+}
+
+.titreRestaurant {
+  display: grid;
+  grid-template-columns: 80% 20%;
+  grid-template-rows: auto;
+  width: 100%;
+}
+
+.titreRestaurantTexte {
+  padding-top: 25px;
+  padding-left: 5px;
+  text-align: left;
+}
+
+.titreRestaurantCoeur {
+  padding-top: 25px;
+  padding-right: 25px;
+  text-align: right;
+}
+
+.flex-menus {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  margin-top: -45px;
+  position: relative;
+  height: 100%;
+  background-color: #F2F2F2;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+}
+
+/* Mise en forme des titres : Entrées, Plats, Desserts */
+.titreCategorie {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  width: 100%;
+  justify-content: start;
+  text-align: left;
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+
+.categorie {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+}
+
+.categorieLigne {
+  width: 50px;
+  border: 2px solid #99E2D0;
+  margin-left: 5px;
+}
+
+/* Grid vignette sous-menu*/
+.sousMenu {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 10px;
+  background-color: #F2F2F2;
+  width: 100%;
+  align-content: space-between;
+}
+
+/* chaque Plat*/
+.sousMenuDetail {
+  display: grid;
+  grid-template-columns: 80% 18% 2%;
+  grid-template-rows: auto;
+  width: 96%;
+  line-height: 16px;
+  min-height: 100%;
+  position: relative;
+  background: white;
+  text-decoration: none;
+  color: #444;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  top: 0;
+  padding: 0;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+/* Plat */
+.sousMenuPlat {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Accompagnements*/
+.policeAccompagnements {
+  font-size: 14px;
+  text-align: left;
+  margin-top: 2%;
+  color: gray;
+  font-weight: 400;
+  padding-left: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sousMenuPrix {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.prixPlat {
+  text-align: right;
+  margin-top: 2%;
+  font-weight: 500;
+  padding-right: 5px;
+}
+
+.sousMenuIcone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  opacity: 0;
+}
+
+/* Bouton commander*/
+.commander {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  padding-top: 40px;
+  padding-bottom: 80px;
+  background-color: #F2F2F2;
+  height: 100%;
+  width: 100%;
+}
+
+.boutonCommander {
+  background: linear-gradient(#FF79DA 0%, #9356DC 100%);
+  height: 50px;
+  width: 70%;
+  border: none;
+  border-radius: 25px 25px 25px 25px;
+  padding: 0 24px;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  color: white;
+  margin: 5px;
+  -webkit-border-radius: 25px 25px 25px 25px;
+  -moz-border-radius: 25px 25px 25px 25px;
+  -ms-border-radius: 25px 25px 25px 25px;
+  -o-border-radius: 25px 25px 25px 25px;
+  /* animation sur les boutons - au survol */
+}
+.boutonCommander:hover {
+  top: -2px;
+  box-shadow: 4px 4px 6px #000;
+}
+
+/*Definition pour les responsives */
+/* Pour les ecrans type portable*/
+@media only screen and (max-width: 768px) {
+  /* Menus */
+  .flex-menus {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sousMenu {
+    grid-template-columns: 1fr;
+    align-content: space-between;
+    margin-left: 0;
+  }
+}
+/* Pour les ecrans type tablette */
+/* typographie commun 
+Polices :
+Logo et titres: Shrikhand
+Texte: Roboto
+Version V. 9.2 finale - modification suite à soutenance */
+/* Couleurs chartre graphique */
+/*Body généralités polices et fond*/
+html {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+
+body {
+  background-color: white;
+  margin: 0;
+}
+
+header {
+  background-color: white;
+}
+
+a {
+  /* Pour les balises liens de toute la page*/
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Définition des tailles de polices */
+/* H1 pour le titre principal */
+.policeH1 {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 32px;
+  color: #333;
+  width: 100%;
+  text-align: center;
+}
+
+/* H1 pour le titre des restaurants dans les menus */
+.policeH1Menu {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 25px;
+  color: #333;
+  width: 100%;
+}
+
+/* H2 pour les titres des containers */
+.policeH2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  color: #333;
+  margin: 5px;
+}
+
+.policeH2Menu {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  color: gray;
+  margin: 5px;
+}
+
+.policeH3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  color: #333;
+  margin: 5px;
+}
+
+.policeH4 {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  color: #333;
+  margin: 5px;
+}
+
+/* H3 pour les vignettes */
+.policeVignetteTitre {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  color: #333;
+  margin: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-bottom: 5px;
+}
+
+/* H4 pour les vignettes et Fonctionnement */
+.policeVignette {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  color: #333;
+  margin: 5px;
+}
+
+/* H3 pour le footer*/
+.policeFooterTitre {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 20px;
+  color: white;
+  margin: 5px;
+}
+
+/* H3 pour le footer*/
+.policeFooter {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  color: white;
+  margin: 5px;
+}
+
+/* Version V. 9.2 finale - modification suite à soutenance */
+/* Header */
+.titreOhmyfood {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: white;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+}
+
+/*Footer*/
+.footer {
+  display: flex;
+  background-color: #353535;
+  flex-direction: column;
+  width: 100%;
+  margin: auto;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  align-items: center;
+  padding: 16px 32px;
+}
+
+.footerColonne {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  margin: 0;
+  width: 100%;
+}
+
+.footerColonneLien {
+  display: block;
+}
+
+.footerColonneLien:hover {
+  text-decoration: underline;
+}
+
+/* Pour les ecrans type desktop */
+@media only screen and (min-width: 992px) {
+  .footerColonne {
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .footerColonneLien {
+    width: 25%;
+    text-align: center;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
