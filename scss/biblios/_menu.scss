@@ -4,40 +4,63 @@ Pour les menus
 menu.css pour les différents menus
 Feuille de style pour le projet 3 ohmyfood
 Par Arnaud Ghali
-Version V. 9.1 finale - modification suite à soutenance */ 
+Version V. 9.2 finale - modification suite à soutenance */ 
 
- 
 @import "typography";
 
 /* Animations */
 
-/* Apparition des sous-menus*/
+/* Apparition des sous-menus puis des plats au fur et à mesure*/
 .entrees {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   width: 100%;
-  animation: apparition 2s ease-in-out;
-  -webkit-animation: apparition 2s ease-in-out;
-  animation-fill-mode: both;
-  animation-delay: 1s;
-  /*& .sousMenuDetail {
-    animation: apparition 2s ease-in-out;
-    -webkit-animation: apparition 2s ease-in-out;
-    animation-fill-mode: both;
-    animation-delay: 1s;
-  }*/
+  animation: apparition 1.25s ease-in-out;
+  -webkit-animation: apparition 1.25s ease-in-out;
+    & .sousMenuDetail1 {
+    animation: apparition 0.25s ease-in-out;
+    -webkit-animation: apparition 0.25s ease-in-out;
+  }
+  
+  & .sousMenuDetail2 {
+    animation: apparition 0.5s ease-in-out;
+    -webkit-animation: apparition 0.5s ease-in-out;
+  }
+  
+  & .sousMenuDetail3 {
+    animation: apparition 1s ease-in-out;
+    -webkit-animation: apparition 1s ease-in-out;
+  }
+
+  & .sousMenuDetail4 {
+    animation: apparition 1.25s ease-in-out;
+    -webkit-animation: apparition 1.25s ease-in-out;
+  }
 }
+
 
 .plats {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   width: 100%;
-  animation: apparition 4s ease-in-out;
-  -webkit-animation: apparition 4s ease-in-out;
-  animation-fill-mode: both;
-  animation-delay: 2s;
+  animation: apparition 1.5s ease-in-out;
+  -webkit-animation: apparition 1.5s ease-in-out;
+  & .sousMenuDetail1 {
+    animation: apparition 0.25s ease-in-out;
+    -webkit-animation: apparition 0.25s ease-in-out;
+  }
+  
+  & .sousMenuDetail2 {
+    animation: apparition 0.5s ease-in-out;
+    -webkit-animation: apparition 0.5s ease-in-out;
+  }
+  
+  & .sousMenuDetail3 {
+    animation: apparition 1s ease-in-out;
+    -webkit-animation: apparition 1s ease-in-out;
+  }
 }
 
 .desserts {
@@ -45,21 +68,40 @@ Version V. 9.1 finale - modification suite à soutenance */
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   width: 100%;
-  animation: apparition 6s ease-in-out;
-  -webkit-animation: apparition 6s ease-in-out;
-  animation-fill-mode: both;
-  animation-delay: 3s;
+  animation: apparition 1.75s ease-in-out;
+  -webkit-animation: apparition 1.75s ease-in-out;
+  & .sousMenuDetail1 {
+    animation: apparition 0.25s ease-in-out;
+    -webkit-animation: apparition 0.25s ease-in-out;
+  }
+  
+  & .sousMenuDetail2 {
+    animation: apparition 0.5s ease-in-out;
+    -webkit-animation: apparition 0.5s ease-in-out;
+  }
+  
+  & .sousMenuDetail3 {
+    animation: apparition 1s ease-in-out;
+    -webkit-animation: apparition 1s ease-in-out;
+  }
 }
 
 @keyframes apparition {
   from {
-    opacity:0;
-  }
+      opacity: 0;
+      transform: translateY(-25px);
+      -webkit-transform: translateY(-25px);
+      -moz-transform: translateY(-25px);
+      -ms-transform: translateY(-25px);
+      -o-transform: translateY(-25px);
+}
   to {
-    opacity:0.5;
-  }
-  to {
-    opacity:1;
+      opacity: 1;
+      transform: translateY(0px);
+      -webkit-transform: translateY(0px);
+      -moz-transform: translateY(0px);
+      -ms-transform: translateY(0px);
+      -o-transform: translateY(0px);
   }
 }
 
@@ -70,7 +112,6 @@ Version V. 9.1 finale - modification suite à soutenance */
     animation: all;
     transition: 0.8s;
     opacity: 1;
-    /*background: $color-primaire;*/
     background: linear-gradient($color-secondaire 0%, $color-primaire 100%);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
@@ -81,8 +122,8 @@ Version V. 9.1 finale - modification suite à soutenance */
 
 
 /* Apparition de la coche */
-
-.sousMenuDetail:hover { /*Puis au survol, soulevons la carte légèrement, rendons l’ombre plus prononcée et apparition de la coche*/
+/*Puis au survol, soulevons la carte légèrement, rendons l’ombre plus prononcée et apparition de la coche*/
+.sousMenuDetail:hover { 
   top: -2px;
   box-shadow: 0 4px 5px rgba(0,0,0,0.2);
   cursor:pointer;
@@ -178,7 +219,8 @@ Version V. 9.1 finale - modification suite à soutenance */
   margin-left: 5px;
 }
 
-.sousMenu { /* Grid vignette sous-menu*/
+/* Grid vignette sous-menu*/
+.sousMenu { 
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
@@ -188,15 +230,12 @@ Version V. 9.1 finale - modification suite à soutenance */
   align-content: space-between;
 }
 
-.sousMenuDetail {/* chaque Plat*/
+/* chaque Plat*/
+.sousMenuDetail {
   display: grid;
   grid-template-columns:80% 18% 2%;
   grid-template-rows: auto;
   width: 96%;
-  /*display : flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: stretch;*/
   line-height: 16px;
   min-height: 100%;
   position: relative;
@@ -272,7 +311,6 @@ Version V. 9.1 finale - modification suite à soutenance */
   background: linear-gradient($color-secondaire 0%, $color-primaire 100%);  
   height: 50px;
   width: 70%;
-  box-shadow: 4px 4px 6px #000;
   border: none;
   border-radius: 25px 25px 25px 25px;
   padding: 0 24px;
@@ -285,6 +323,11 @@ Version V. 9.1 finale - modification suite à soutenance */
   -moz-border-radius: 25px 25px 25px 25px;
   -ms-border-radius: 25px 25px 25px 25px;
   -o-border-radius: 25px 25px 25px 25px;
+  /* animation sur les boutons - au survol */
+  &:hover {
+    top: -2px;
+    box-shadow: 4px 4px 6px #000;
+  }
 }
 
 
